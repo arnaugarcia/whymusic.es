@@ -1,0 +1,295 @@
+[02-Jan-2016 15:29:37 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelHtaccess.php on line 11
+[02-Jan-2016 15:31:18 Europe/Madrid] PHP Parse error:  syntax error, unexpected ')' in /home/uqfhhbcn/public_html/framework/Model/ModelUrl.php on line 22
+[02-Jan-2016 15:31:29 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelHtaccess.php on line 11
+[02-Jan-2016 15:31:58 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_module_exists() in /home/uqfhhbcn/public_html/framework/Model/ModelHtaccess.php on line 11
+[02-Jan-2016 15:32:46 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_module_exists() in /home/uqfhhbcn/public_html/framework/Model/ModelUrl.php on line 22
+[02-Jan-2016 15:32:47 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_module_exists() in /home/uqfhhbcn/public_html/framework/Model/ModelUrl.php on line 22
+[02-Jan-2016 15:33:31 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:33:32 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:33:34 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:33:35 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:33:48 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:33:48 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:33:56 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:34:07 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:34:08 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:34:54 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:34:54 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:34:56 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:34:57 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:02 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:03 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:09 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:09 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:35 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:35 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:36 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:37 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:37 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:35:38 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:03 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:04 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:07 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:07 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:53 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:54 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:54 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:36:55 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:38:57 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:38:58 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:39:04 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:39:05 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:39:41 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:39:42 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:39:49 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:39:50 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:06 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:06 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:28 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:28 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:29 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:29 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:39 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:39 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:47 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:40:47 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:09 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:10 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:12 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:12 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:15 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:16 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:36 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:41:37 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:42:08 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:42:08 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:42:15 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:42:17 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:43:36 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:43:37 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:43:39 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:43:39 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:36 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:37 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:39 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:40 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:43 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:44 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:46 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:47 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:50 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:44:50 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:46:55 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:46:55 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:47:35 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:47:35 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:47:46 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:47:47 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:53:31 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:53:32 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:53:33 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:53:41 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:53:41 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:08 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:09 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:10 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:10 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:53 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:54 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:55 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:54:55 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:55:01 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:55:02 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:55:05 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:55:05 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:55:08 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:56:27 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:56:28 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:56:56 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:56:56 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:56:59 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:00 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:07 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:08 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:10 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:11 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:48 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:57:49 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 15:59:56 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:02:10 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:02:55 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:02:56 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:02:59 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:03:03 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:03:10 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:03:26 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:06:33 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:06:34 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:06:38 Europe/Madrid] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 23
+[02-Jan-2016 16:49:54 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 8
+[02-Jan-2016 16:50:12 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 8
+[02-Jan-2016 16:50:13 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 8
+[02-Jan-2016 16:50:17 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 8
+[02-Jan-2016 16:54:38 Europe/Madrid] PHP Warning:  require(Model/ModelIdioma.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 10
+[02-Jan-2016 16:54:38 Europe/Madrid] PHP Warning:  require(Model/ModelIdioma.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 10
+[02-Jan-2016 16:54:38 Europe/Madrid] PHP Fatal error:  require(): Failed opening required 'Model/ModelIdioma.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 10
+[02-Jan-2016 16:55:06 Europe/Madrid] PHP Fatal error:  Class 'Config' not found in /home/uqfhhbcn/public_html/framework/Model/ModelLang.php on line 5
+[02-Jan-2016 16:58:30 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$user_language' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelLang.php on line 12
+[02-Jan-2016 16:58:54 Europe/Madrid] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelLang.php on line 11
+[02-Jan-2016 17:00:16 Europe/Madrid] PHP Fatal error:  Call to undefined method IDIOMA::getUserLang() in /home/uqfhhbcn/public_html/framework/Model.php on line 23
+[02-Jan-2016 17:01:56 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelLang.php on line 11
+[02-Jan-2016 17:06:06 Europe/Madrid] PHP Fatal error:  Call to undefined method IDIOMA::getUserLang() in /home/uqfhhbcn/public_html/framework/Model.php on line 13
+[02-Jan-2016 17:12:27 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 7
+[02-Jan-2016 18:05:21 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:08:26 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:08:34 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:09:46 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:09:48 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:15:46 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:16:06 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn_admin'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', 'whymusicadmin20...')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:16:08 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn_admin'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', 'whymusicadmin20...')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:16:48 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:18:47 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:19:46 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:21:11 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn_admin'@'hl308.hosteurope.es' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:21:26 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:25:23 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:25:52 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:25:53 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20
+[02-Jan-2016 18:26:22 Europe/Madrid] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php on line 20

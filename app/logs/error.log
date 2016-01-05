@@ -1,0 +1,330 @@
+[2014-08-24 07:08:44] [E_NOTICE: Undefined variable: hola] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 7]
+[2014-08-24 07:08:28] [E_NOTICE: Undefined variable: hola] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 7]
+[2014-08-25 05:08:58] [E_NOTICE: Undefined variable: hola] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 7]
+[2014-08-25 06:08:14] [E_NOTICE: Undefined variable: pagination] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 36]
+[2014-08-25 07:08:39] [E_NOTICE: Undefined variable: hola] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 7]
+[2014-08-25 07:08:59] [E_NOTICE: Undefined variable: hola] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 7]
+[2014-08-25 07:08:38] [E_NOTICE: Undefined variable: connection] [IN FILE C:\xampp\htdocs\framework\app\Controllers\DemoController.php] [LINE 105]
+[2014-08-25 07:08:52] [E_NOTICE: Undefined variable: models] [IN FILE C:\xampp\htdocs\framework\app\Views\demo\index.php] [LINE 34]
+[2014-08-25 07:08:07] [E_NOTICE: Undefined variable: model] [IN FILE C:\xampp\htdocs\framework\app\Controllers\DemoController.php] [LINE 125]
+[2014-08-26 03:08:49] [E_WARNING: call_user_func() expects parameter 1 to be a valid callback, class 'DemoController' does not have a method 'register'] [IN FILE C:\xampp\htdocs\framework\framework\Model.php] [LINE 45]
+[2014-08-26 03:08:12] [E_WARNING: call_user_func() expects parameter 1 to be a valid callback, class 'DemoController' does not have a method 'register'] [IN FILE C:\xampp\htdocs\framework\framework\Model.php] [LINE 45]
+[2014-08-31 05:08:15] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:18] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:48] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:23] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:24] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:27] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:05] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:07] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:08] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2014-08-31 05:08:24] [E_NOTICE: Undefined variable: meta] [IN FILE C:\xampp\htdocs\framework\app\Views\layouts\demolayout.php] [LINE 5]
+[2016-01-02 03:01:37] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelHtaccess.php] [LINE 11]
+[2016-01-02 03:01:29] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelHtaccess.php] [LINE 11]
+[2016-01-02 03:01:58] [E_ERROR: Call to undefined function apache_module_exists()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelHtaccess.php] [LINE 11]
+[2016-01-02 03:01:46] [E_ERROR: Call to undefined function apache_module_exists()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelUrl.php] [LINE 22]
+[2016-01-02 03:01:47] [E_ERROR: Call to undefined function apache_module_exists()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelUrl.php] [LINE 22]
+[2016-01-02 03:01:31] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:32] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:34] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:35] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:48] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:48] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:56] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:07] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:08] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:54] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:54] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:56] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:57] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:02] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:03] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:09] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:09] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:35] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:35] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:36] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:37] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:37] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:38] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:03] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:04] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:07] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:07] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:53] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:54] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:54] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:55] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:57] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:58] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:04] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:05] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:41] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:42] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:49] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:50] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:06] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:06] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:28] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:28] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:29] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:29] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:39] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:39] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:47] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:47] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:09] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:10] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:12] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:12] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:15] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:16] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:36] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:37] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:08] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:08] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:15] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:17] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:36] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:37] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:39] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:39] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:36] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:37] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:39] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:40] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:43] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:44] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:46] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:47] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:50] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:50] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:55] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:55] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:35] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:35] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:46] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:47] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:31] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:32] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:33] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:41] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:41] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:08] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:09] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:10] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:10] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:53] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:54] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:55] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:55] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:01] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:02] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:05] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:05] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:08] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:27] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:28] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:56] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:56] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:59] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:00] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:07] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:08] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:10] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:11] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:48] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:49] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 03:01:56] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:10] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:55] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:56] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:59] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:03] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:10] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:26] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:33] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:34] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:38] [E_ERROR: Call to undefined function apache_get_modules()] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php] [LINE 23]
+[2016-01-02 04:01:08] [E_NOTICE: Undefined index: sqlite] [IN FILE /home/uqfhhbcn/public_html/app/Controllers/DemoController.php] [LINE 95]
+[2016-01-02 04:01:17] [E_NOTICE: Undefined index: sqlite] [IN FILE /home/uqfhhbcn/public_html/app/Controllers/DemoController.php] [LINE 95]
+[2016-01-02 04:01:53] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 04:01:59] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:16] [E_ERROR: Call to undefined method IDIOMA::getUserLang()] [IN FILE /home/uqfhhbcn/public_html/framework/Model.php] [LINE 23]
+[2016-01-02 05:01:02] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:28] [E_STRICT: Non-static method IDIOMA::getUserLanguage() should not be called statically] [IN FILE /home/uqfhhbcn/public_html/framework/Model.php] [LINE 23]
+[2016-01-02 05:01:57] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:16] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:17] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:30] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:32] [E_NOTICE: Use of undefined constant INICIO - assumed 'INICIO'] [IN FILE /home/uqfhhbcn/public_html/app/Views/layouts/demolayout.php] [LINE 27]
+[2016-01-02 05:01:05] [E_NOTICE: Use of undefined constant PAG_NOT_FOUND_DESC - assumed 'PAG_NOT_FOUND_DESC'] [IN FILE /home/uqfhhbcn/public_html/app/Views/errors/error.php] [LINE 57]
+[2016-01-02 05:01:04] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:27] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:50] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:51] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:51] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:52] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:52] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:52] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 05:01:53] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:21] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:26] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:34] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:46] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:48] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:51] [E_WARNING: PDO::__construct(): MySQL server has gone away] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:05] [E_WARNING: PDO::__construct(): MySQL server has gone away] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:09] [E_WARNING: PDO::__construct(): MySQL server has gone away] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:46] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:06] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn_admin'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', 'whymusicadmin20...')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:08] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn_admin'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', 'whymusicadmin20...')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:14] [E_WARNING: PDO::__construct(): MySQL server has gone away] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:34] [E_WARNING: PDO::__construct(): MySQL server has gone away] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:48] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:47] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:46] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:45] [E_WARNING: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:11] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn_admin'@'hl308.hosteurope.es' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:26] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:08] [E_WARNING: PDO::__construct(): MySQL server has gone away] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:23] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:52] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:53] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'uqfhhbcn_admin'@'localhost' to database 'uqfhhbcn_whymusic'' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn_admin', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]
+[2016-01-02 06:01:22] [E_ERROR: Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'uqfhhbcn'@'localhost' (using password: YES)' in /home/uqfhhbcn/public_html/framework/Model/ModelDb.php:20
+Stack trace:
+#0 /home/uqfhhbcn/public_html/framework/Model/ModelDb.php(20): PDO->__construct('mysql:dbname=uq...', 'uqfhhbcn', '5933059330')
+#1 /home/uqfhhbcn/public_html/app/Controllers/DemoController.php(95): DB::connect(Array)
+#2 [internal function]: DemoController->index()
+#3 /home/uqfhhbcn/public_html/framework/Model.php(39): call_user_func(Array)
+#4 /home/uqfhhbcn/public_html/public/index.php(2): require('/home/uqfhhbcn/...')
+#5 {main}
+  thrown] [IN FILE /home/uqfhhbcn/public_html/framework/Model/ModelDb.php] [LINE 20]

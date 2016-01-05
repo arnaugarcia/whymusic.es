@@ -1,0 +1,6 @@
+DirectoryIndex public/index.php?r=demo/index
+ErrorDocument 404 http://www.whymusic.es/public/index.php?r=demo/error
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ public/$1 [L] 
