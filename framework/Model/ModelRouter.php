@@ -1,7 +1,6 @@
 <?php
 
-class ROUTER 
-{
+class ROUTER {
     static function show_view($view, $model=null){
         if (is_array($model)){
             extract($model);

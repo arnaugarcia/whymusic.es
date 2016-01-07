@@ -8,6 +8,8 @@ require "Model/ModelUrl.php";
 require "Model/ModelHtaccess.php";
 require "Model/ModelPagination.php";
 require 'Model/ModelLang.php';
+require 'Model/ModelLogin.php';
+require 'Model/ModelRegistration.php';
 require "../app/Config/Config.php";
 require "../app/Controllers/Controllers.php";
 

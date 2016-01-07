@@ -28,7 +28,7 @@ echo HTML::button_HTML5("submit", "Send");
 
 echo HTML::close_form();
 
-*/
+
 ?>
 <form method="post">
     <?php echo BUSCAR ?>: <input type="search" name="buscar" placeholder="<?php echo BUSCAR ?>">
@@ -36,6 +36,7 @@ echo HTML::close_form();
 </form>
 <br><br>
 <?php
+echo $msg;
 echo "<table class='table'>";
 foreach ($model as $row)
 {
@@ -43,4 +44,4 @@ foreach ($model as $row)
 }
 echo "</table>";
 
-$pagination->pages('btn btn-primary');
+$pagination->pages('btn btn-primary');*/

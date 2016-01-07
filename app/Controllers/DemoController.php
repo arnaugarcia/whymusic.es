@@ -41,11 +41,10 @@ class DemoController extends Controllers
         
         /* MAILER 
         $mailer = new MAILER();
-        $mailer->config($this->mailer["hotmail"]);
-        $mailer->Subject = "Hola amigo";
-        $mailer->addAddress("mdgproduccionesweb@gmail.com", "Manuel");
-        $mailer->msgHTML("Hola amigo");
-        
+        $mailer->config($this->mailer["whymusic"]);
+        $mailer->Subject = "WhyMusic";
+        $mailer->addAddress("nefer.keter97@gmail.com", "Arnau Garcia");
+        $mailer->msgHTML("<h1>Alleluya!</h1>");
         if ($mailer->Send())
         {
             $msg = "Mensaje enviado con éxito<br>";
@@ -54,8 +53,6 @@ class DemoController extends Controllers
         {
             $msg = "Ha ocurrido un error al enviar el mensaje<br>";
         }
-        */
-        
         $rules = array(
             "name" => array(
                 array("required" => true, "msg" => "El campo name es requerido"),
@@ -123,17 +120,9 @@ class DemoController extends Controllers
         while($rows = $query->fetch()){
         $model[] = $rows;
         }
-       }
-        return ROUTER::show_view('demo/index', array('meta' => $meta, 'msg' => $msg, 'model' => $model, 'pagination' => $pagination));
+       }*/
+        return ROUTER::show_view('demo/index', array('meta' => $meta));
     }
-    public function login(){
-		$meta = array(
-		'title' => 'WhyMusic · Log-In',
-		'description' => 'Login de whymusic.es',
-		'keywords' => '',
-		'robots' => 'NOINDEX,NOFOLLOW',
-		);
-        return ROUTER::show_view('demo/login', array("meta" => $meta));
-    }
+    
 }
 

@@ -7,6 +7,9 @@
         <meta name="keywords" content="<?php echo $meta["keywords"] ?>">
         <meta name="robots" content="<?php echo $meta["robots"] ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo URL::base_url()."/bootstrap/css/bootstrap.min.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL::base_url()."/bootstrap/css/bootstrap.min.css" ?>">
+        <link href="<?php echo URL::base_url()."/bootstrap/admin/sb-admin.css" ?>" rel="stylesheet">
+        <link href="<?php echo URL::base_url()."/bootstrap/admin/plugins/morris.css" ?>" rel="stylesheet">
         <script type="text/javascript" src="<?php echo URL::base_url()."/bootstrap/js/jquery.js" ?>"></script>
         <script type="text/javascript" src="<?php echo URL::base_url()."/bootstrap/js/bootstrap.min.js" ?>"></script>
     </head>
@@ -21,11 +24,15 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="<?php echo ROUTER::create_action_url('demo/index');?>"><?php echo $app->appName ?></a>
-        </div>
+          </div>
+                <?php
+        if(!empty($_SESSION['user_name'])){
+            include 'perfil.php';
+            } ?>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li <?php if ($_GET["r"] == "demo/index"){ echo 'class="active"'; } ?>><a href="<?php echo ROUTER::create_action_url("demo/index") ?>"><?php echo INICIO ?></a></li>
-            <li <?php if ($_GET["r"] == "demo/login"){ echo 'class="active"'; } ?>><a href="<?php echo ROUTER::create_action_url("demo/login") ?>">Login</a></li>
+            <li <?php if ($_GET["r"] == "login/login"){ echo 'class="active"'; } ?>><a href="<?php echo ROUTER::create_action_url("login/login") ?>"><?php echo LOGIN_ENTRAR ?></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

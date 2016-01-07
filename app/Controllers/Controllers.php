@@ -4,7 +4,7 @@ class Controllers extends Config {
     
     public function error()
     {
-                $meta = array
+            $meta = array
             (
             'title' => 'Page not found, error 404',
             'description' => 'Page not found, error 404',
