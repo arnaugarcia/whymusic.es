@@ -1,4 +1,4 @@
-<?php 
+<?php
 
- ?>
+echo "Bienvenido a Admin";
 

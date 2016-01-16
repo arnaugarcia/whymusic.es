@@ -1,42 +1,24 @@
 <?php
+
 require "Model/ModelRouter.php";
 require "Model/ModelHtml.php";
-require "Model/ModelDb.php";
-require "Model/ModelPhpmailer.php";
-require "Model/ModelFormvalidate.php";
-require "Model/ModelUrl.php";
-require "Model/ModelHtaccess.php";
-require "Model/ModelPagination.php";
-require 'Model/ModelLang.php';
-require 'Model/ModelLogin.php';
-require 'Model/ModelRegistration.php';
 require "../app/Config/Config.php";
-require "../app/Controllers/Controllers.php";
 
-//IF encargado del idioma
-if(IDIOMA::getUserLanguage()=="es" || IDIOMA::getUserLanguage()=="ca" || IDIOMA::getUserLanguage()=="en"){
-    require "../app/langs/".IDIOMA::getUserLanguage().".php";
-}else{
-    require "../app/langs/en.php";
-}
-    echo $dioma;
-$config = new Config();
-if ($config->debug){
-    require "Model/ErrorHandler.php";
-}else{
-    error_reporting("E_ALL");
-}
-HTACCESS::$DirectoryIndex = $config->DirectoryIndex;
-HTACCESS::$ErrorPage = $config->ErrorPage;
-HTACCESS::$rules = $config->rules;
-HTACCESS::run();
-if (isset($_GET["r"])){
-    $route = $_GET["r"];
+if (isset($_GET["ruta"])){
+    $route = $_GET["ruta"];
     $route = explode("/", $route);
     $controller = $route[0];
     $action = $route[1];
     $class_controller = ucfirst($controller)."Controller";
-    require "../app/Controllers/$class_controller.php";
-    $app = new $class_controller;
-    call_user_func(array($app, $action));
+    if (!file_exists("../app/Controllers/$class_controller.php")) {
+       echo "<br>El Contrloador $class_controller, no existe";
+    }else{
+        require "../app/Controllers/$class_controller.php";
+        if (class_exists($action)) {
+            $obj = new $class_controller;
+           call_user_func(array($obj, $action));
+        }else{
+            echo "Error, la clase en el controlador no existe";
+        }
+    }
 }

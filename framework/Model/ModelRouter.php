@@ -1,41 +1,39 @@
 <?php
 
-class ROUTER {
+class ROUTER{
     static function show_view($view, $model=null){
         if (is_array($model)){
             extract($model);
         }
-        $route = explode("/", $_GET["r"]);
+        $route = explode("/", $_GET["ruta"]);
         $controller = $route[0];
         $controller = ucfirst($controller)."Controller";
-        $app = new $controller;
-        $layout = $app->layout;
+        $obj = new $controller;
+        $layout = $obj->layout;
         $content = "../app/Views/$view.php";
-        include "../app/Views/$layout.php";
+        if (!file_exists("../app/Views/$layout.php")) {
+           echo "La vista $layout no existe.";
+        }else{
+            include "../app/Views/$layout.php";
+        }
     }
     static function create_action_url($r, $parameters=null){
         $p = null;
-        $config = new Config();
-        $rule = $config->rules[$r];
-        $r = $rule["?r=$r"];
         if (is_array($parameters)){
-                foreach ($parameters as $param => $value){
-                   $p .= "/$param/$value"; 
-                }
+            foreach($parameters as $param => $value){
+                $p .= "&$param=$value";
             }
-            return URL::base_url()."/".$r."".$p."";
+        }
+        return "index.php?ruta=".$r."".$p."";
     }
     static function redirect_to_action($r, $parameters=null){
-            $p = null;
-            $config = new Config();
-            $rule = $config->rules[$r];
-            $r = $rule["?r=$r"];
-            if (is_array($parameters)){
-                foreach ($parameters as $param => $value){
-                   $p .= "/$param/$value"; 
-                }
+        $p = null;
+        if (is_array($parameters)){
+            foreach($parameters as $param => $value){
+                $p .= "&$param=$value";
             }
-            return header("location: ".URL::base_url()."/".$r."".$p."");
+        }
+        header("location: index.php?ruta=".$r."".$p."");
     }
     static function load_view($v){
         include "../app/Views/$v.php";
