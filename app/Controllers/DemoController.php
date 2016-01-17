@@ -5,7 +5,7 @@ class DemoController extends Config{
     public function index(){
         $meta = array
             (
-            'title' => 'Página de inicio',
+            'title' => 'WhyMusic · Inicio',
             'description' => 'Es la descripción de la página de inicio',
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',

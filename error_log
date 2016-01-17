@@ -1,0 +1,22 @@
+[17-Jan-2016 00:55:46 Europe/Madrid] PHP Warning:  require(../framework/Model.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/index.php on line 2
+[17-Jan-2016 00:55:46 Europe/Madrid] PHP Warning:  require(../framework/Model.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/index.php on line 2
+[17-Jan-2016 00:55:46 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '../framework/Model.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/index.php on line 2
+[17-Jan-2016 00:56:03 Europe/Madrid] PHP Warning:  require(/framework/Model.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/index.php on line 2
+[17-Jan-2016 00:56:03 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '/framework/Model.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/index.php on line 2
+[17-Jan-2016 00:56:19 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:56:19 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:56:19 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '../app/Config/Config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:57:18 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:57:18 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:57:18 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '../app/Config/Config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:57:35 Europe/Madrid] PHP Fatal error:  Class 'Config' not found in /home/uqfhhbcn/public_html/index.php on line 2
+[17-Jan-2016 00:58:46 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:58:46 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:58:46 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '../app/Config/Config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 00:59:33 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 5
+[17-Jan-2016 00:59:51 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 6
+[17-Jan-2016 01:15:54 Europe/Madrid] PHP Warning:  require(/app/Controllers/DemoController.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 16
+[17-Jan-2016 01:15:54 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '/app/Controllers/DemoController.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 16
+[17-Jan-2016 01:16:42 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 01:16:42 Europe/Madrid] PHP Warning:  require(../app/Config/Config.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 5
+[17-Jan-2016 01:16:42 Europe/Madrid] PHP Fatal error:  require(): Failed opening required '../app/Config/Config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 5

@@ -1,0 +1,1 @@
+<?php header("location: http://whymusic.es/public/index.php?ruta=demo/index"); ?>

@@ -1,5 +1,6 @@
 <?php
 require "Model/ModelRouter.php";
+require "Model/ModelUrl.php";
 require "Model/ModelHtml.php";
 require "../app/Config/Config.php";
 if (isset($_GET["ruta"])){
