@@ -1,10 +1,8 @@
 <?php
 
-class DemoController extends Config
-{
+class DemoController extends Config{
     public $layout = "layouts/demolayout";
-    public function index()
-    {
+    public function index(){
         $meta = array
             (
             'title' => 'Página de inicio',
@@ -14,8 +12,7 @@ class DemoController extends Config
             );
         return ROUTER::show_view('demo/index', array('meta' => $meta));
     }
-    public function login()
-    {
+    public function login(){
         return ROUTER::show_view('demo/login');
     }
 }

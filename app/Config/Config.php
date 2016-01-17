@@ -2,6 +2,6 @@
 
 class Config
 {
-     public $layout = "layouts/layout";
+    public $layout = "layouts/layout";
 }
 
