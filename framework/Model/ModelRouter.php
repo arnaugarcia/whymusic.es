@@ -1,5 +1,4 @@
 <?php
-
 class ROUTER{
     static function show_view($view, $model=null){
         if (is_array($model)){
@@ -29,14 +28,15 @@ class ROUTER{
 
         return URL::base_url()."index.php?ruta=".$r."".$p."";
     }
-    static function redirect_to_action($r, $parameters=null){
+    static function redirect_to_action($r, $time=0, $parameters=null){
         $p = null;
         if (is_array($parameters)){
             foreach($parameters as $param => $value){
                 $p .= "&$param=$value";
             }
         }
-        header("location: index.php?ruta=".$r."".$p."");
+        echo "<meta http-equiv='Refresh' content='$time; url=index.php?ruta=". $r."".$p."'/>";
+        //header("location: index.php?ruta=".$r."".$p."");
     }
     static function load_view($v){
         include "../app/Views/$v.php";

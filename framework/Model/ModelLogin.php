@@ -378,7 +378,6 @@ class ModelLogin{
         session_destroy();
         $this->user_is_logged_in = false;
         $this->messages[] = "Has salido con exito";
-        echo "Llego hasta aquí";
     }
 
     /**

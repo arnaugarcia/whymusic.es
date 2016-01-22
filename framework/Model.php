@@ -16,12 +16,17 @@ if(IDIOMA::getUserLanguage()=="es" || IDIOMA::getUserLanguage()=="ca" || IDIOMA:
 
 /* Método para los errores */
 $config = new Config();
+$login = new ModelLogin();
+if ($login->isUserLoggedIn() == true) {
+            echo "Login status: Loggeado <br>";
+        }else{
+            echo "Loggin status: No Logged <br>";
+    }
 if ($config->debug){
-    require "Model/ErrorHandler.php";
+    require "Model/ModelError.php";
 }else{
     error_reporting("E_ALL");
 }
-
 if (isset($_GET["ruta"])){
     $route = $_GET["ruta"];
     $route = explode("/", $route);

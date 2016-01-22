@@ -14,7 +14,7 @@ if(isset($login)) {
     }
 }
 if ($login->isUserLoggedIn() == true) {
-    echo("It works son of a bitch!");
+    ROUTER::redirect_to_action("account/user");
 } else {
 	echo ROUTER::create_action_url("account/login");
     echo HTML::open_div(array("id" => "login"));

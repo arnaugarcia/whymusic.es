@@ -8,7 +8,7 @@ echo "Foto de perfil: " . '<br/>' . $login->user_gravatar_image_tag;
 ?>
 
 <div>
-    <a href="<?php echo ROUTER::create_action_url('account/logout')?>"><?php echo WORDING_LOGOUT; ?></a>
+    <a href="<?php echo ROUTER::create_action_url('account/logout&logout')?>"><?php echo WORDING_LOGOUT; ?></a>
     <a href="edit.php"><?php echo WORDING_EDIT_USER_DATA; ?></a>
 </div>
 ?>

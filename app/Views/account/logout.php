@@ -14,4 +14,7 @@ if(isset($login)) {
     }
 }
 $login->doLogout();
+echo HTML::br(2);
+echo "Serás redireccionado en 2 segundos";
+ROUTER::redirect_to_action("demo/index",2);
 ?>
