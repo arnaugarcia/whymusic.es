@@ -26,7 +26,8 @@ class ROUTER{
                 $p .= "&$param=$value";
             }
         }
-        return "index.php?ruta=".$r."".$p."";
+
+        return URL::base_url()."index.php?ruta=".$r."".$p."";
     }
     static function redirect_to_action($r, $parameters=null){
         $p = null;

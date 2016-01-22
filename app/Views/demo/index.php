@@ -1,7 +1,4 @@
 <h1>Hola desde mi Framework de PHP</h1>
-<a href="<?php echo ROUTER::create_action_url('demo/index'); ?>">Inicio</a>
-<a href="<?php echo ROUTER::create_action_url('account/login'); ?>">Login</a>
-
 <?php
 if (isset($_POST["usuario_nombre"])) {
 	echo "Has eviado un nombre de usuario" . $_POST['usuario_nombre'];

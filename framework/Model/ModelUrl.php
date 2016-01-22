@@ -13,15 +13,8 @@ class URL{
         //Eliminamos del array index.php
         array_pop($path);
         //Comprobamos si estamos utilizando urls amigables
-        if (in_array("mod_rewrite", apache_get_modules())){
-           //Eliminamos del array public
-           array_pop($path);
            $path = implode("/", $path);
-        }
-        else{
-           $path = implode("/", $path);
-        }
-        return $protocol."://".$server_name.$path;
+        return $protocol."://".$server_name.$path."/";
     }
     static function redirect($url){
         header("location: $url");

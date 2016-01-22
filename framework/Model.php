@@ -2,7 +2,26 @@
 require "Model/ModelRouter.php";
 require "Model/ModelUrl.php";
 require "Model/ModelHtml.php";
+require "Model/ModelLogin.php";
+require 'Model/ModelRegistration.php';
 require "../app/Config/Config.php";
+require '../app/translations/ca.php';
+require '../app/libraries/PHPMailer.php';
+/* IF encargado del idioma
+if(IDIOMA::getUserLanguage()=="es" || IDIOMA::getUserLanguage()=="ca" || IDIOMA::getUserLanguage()=="en"){
+    require "../app/langs/".IDIOMA::getUserLanguage().".php";
+}else{
+    require "../app/langs/es.php";
+}*/
+
+/* Método para los errores */
+$config = new Config();
+if ($config->debug){
+    require "Model/ErrorHandler.php";
+}else{
+    error_reporting("E_ALL");
+}
+
 if (isset($_GET["ruta"])){
     $route = $_GET["ruta"];
     $route = explode("/", $route);

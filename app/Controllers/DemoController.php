@@ -1,7 +1,7 @@
 <?php
 
 class DemoController extends Config{
-    public $layout = "layouts/demolayout";
+    public $layout = "layouts/loginlayout";
     public function index(){
         $meta = array
             (
@@ -11,9 +11,6 @@ class DemoController extends Config{
             'robots' => 'All',
             );
         return ROUTER::show_view('demo/index', array('meta' => $meta));
-    }
-    public function login(){
-        return ROUTER::show_view('demo/login');
     }
 }
 
