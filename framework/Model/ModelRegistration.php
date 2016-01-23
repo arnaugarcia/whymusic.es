@@ -29,11 +29,11 @@ class ModelRegistration
      */
     public function __construct()
     {
-        session_start();
+       // session_start();
 
         // if we have such a POST request, call the registerNewUser() method
         if (isset($_POST["register"])) {
-            $this->registerNewUser($_POST['user_name'], $_POST['user_email'], $_POST['user_password_new'], $_POST['user_password_repeat'], $_POST["captcha"]);
+            $this->registerNewUser($_POST['usuario_nombre_usuario'], $_POST['usuario_email'], $_POST['usuario_contrasena'], $_POST['usuario_contrasena_repeat']);
         }
         //if we have such a GET request, call the verifyNewUser() method
         else if (isset($_GET["id"]) && isset($_GET["verification_code"])) {
@@ -72,49 +72,47 @@ class ModelRegistration
      * handles the entire registration process. checks all error possibilities, and creates a new user in the database if
      * everything is fine
      */
-    private function registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha)
+    private function registerNewUser($usuario_nombre_usuario, $usuario_email, $usuario_contrasena, $usuario_contrasena_repeat)
     {
         // we just remove extra space on username and email
-        $user_name  = trim($user_name);
-        $user_email = trim($user_email);
+        $usuario_nombre_usuario  = trim($usuario_nombre_usuario);
+        $usuario_email = trim($usuario_email);
 
         // check provided data validity
         // TODO: check for "return true" case early, so put this first
-        if (strtolower($captcha) != strtolower($_SESSION['captcha'])) {
-            $this->errors[] = MESSAGE_CAPTCHA_WRONG;
-        } elseif (empty($user_name)) {
+        if (empty($usuario_nombre_usuario)) {
             $this->errors[] = MESSAGE_USERNAME_EMPTY;
-        } elseif (empty($user_password) || empty($user_password_repeat)) {
+        } elseif (empty($usuario_contrasena) || empty($usuario_contrasena_repeat)) {
             $this->errors[] = MESSAGE_PASSWORD_EMPTY;
-        } elseif ($user_password !== $user_password_repeat) {
+        } elseif ($usuario_contrasena !== $usuario_contrasena_repeat) {
             $this->errors[] = MESSAGE_PASSWORD_BAD_CONFIRM;
-        } elseif (strlen($user_password) < 6) {
+        } elseif (strlen($usuario_contrasena) < 6) {
             $this->errors[] = MESSAGE_PASSWORD_TOO_SHORT;
-        } elseif (strlen($user_name) > 64 || strlen($user_name) < 2) {
+        } elseif (strlen($usuario_nombre_usuario) > 64 || strlen($usuario_nombre_usuario) < 2) {
             $this->errors[] = MESSAGE_USERNAME_BAD_LENGTH;
-        } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $user_name)) {
+        } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $usuario_nombre_usuario)) {
             $this->errors[] = MESSAGE_USERNAME_INVALID;
-        } elseif (empty($user_email)) {
+        } elseif (empty($usuario_email)) {
             $this->errors[] = MESSAGE_EMAIL_EMPTY;
-        } elseif (strlen($user_email) > 64) {
+        } elseif (strlen($usuario_email) > 64) {
             $this->errors[] = MESSAGE_EMAIL_TOO_LONG;
-        } elseif (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+        } elseif (!filter_var($usuario_email, FILTER_VALIDATE_EMAIL)) {
             $this->errors[] = MESSAGE_EMAIL_INVALID;
 
         // finally if all the above checks are ok
         } else if ($this->databaseConnection()) {
             // check if username or email already exists
-            $query_check_user_name = $this->db_connection->prepare('SELECT user_name, user_email FROM users WHERE user_name=:user_name OR user_email=:user_email');
-            $query_check_user_name->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-            $query_check_user_name->bindValue(':user_email', $user_email, PDO::PARAM_STR);
-            $query_check_user_name->execute();
-            $result = $query_check_user_name->fetchAll();
+            $query_check_usuario_nombre_usuario = $this->db_connection->prepare('SELECT usuario_nombre_usuario, usuario_email FROM wm_usuarios WHERE usuario_nombre_usuario=:usuario_nombre_usuario OR usuario_email=:usuario_email');
+            $query_check_usuario_nombre_usuario->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
+            $query_check_usuario_nombre_usuario->bindValue(':usuario_email', $usuario_email, PDO::PARAM_STR);
+            $query_check_usuario_nombre_usuario->execute();
+            $result = $query_check_usuario_nombre_usuario->fetchAll();
 
             // if username or/and email find in the database
             // TODO: this is really awful!
             if (count($result) > 0) {
                 for ($i = 0; $i < count($result); $i++) {
-                    $this->errors[] = ($result[$i]['user_name'] == $user_name) ? MESSAGE_USERNAME_EXISTS : MESSAGE_EMAIL_ALREADY_EXISTS;
+                    $this->errors[] = ($result[$i]['usuario_nombre_usuario'] == $usuario_nombre_usuario) ? MESSAGE_USERNAME_EXISTS : MESSAGE_EMAIL_ALREADY_EXISTS;
                 }
             } else {
                 // check if we have a constant HASH_COST_FACTOR defined (in config/hashing.php),
@@ -125,32 +123,32 @@ class ModelRegistration
                 // the PASSWORD_DEFAULT constant is defined by the PHP 5.5, or if you are using PHP 5.3/5.4, by the password hashing
                 // compatibility library. the third parameter looks a little bit shitty, but that's how those PHP 5.5 functions
                 // want the parameter: as an array with, currently only used with 'cost' => XX.
-                $user_password_hash = password_hash($user_password, PASSWORD_DEFAULT, array('cost' => $hash_cost_factor));
+                $usuario_contrasena = password_hash($usuario_contrasena, PASSWORD_DEFAULT, array('cost' => $hash_cost_factor));
                 // generate random hash for email verification (40 char string)
-                $user_activation_hash = sha1(uniqid(mt_rand(), true));
+                $usuario_hash = sha1(uniqid(mt_rand(), true));
 
-                // write new users data into database
-                $query_new_user_insert = $this->db_connection->prepare('INSERT INTO users (user_name, user_password_hash, user_email, user_activation_hash, user_registration_ip, user_registration_datetime) VALUES(:user_name, :user_password_hash, :user_email, :user_activation_hash, :user_registration_ip, now())');
-                $query_new_user_insert->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-                $query_new_user_insert->bindValue(':user_password_hash', $user_password_hash, PDO::PARAM_STR);
-                $query_new_user_insert->bindValue(':user_email', $user_email, PDO::PARAM_STR);
-                $query_new_user_insert->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
-                $query_new_user_insert->bindValue(':user_registration_ip', $_SERVER['REMOTE_ADDR'], PDO::PARAM_STR);
+                // write new wm_usuarios data into database
+                $query_new_user_insert = $this->db_connection->prepare('INSERT INTO wm_usuarios (usuario_nombre_usuario, usuario_contrasena, usuario_email, usuario_hash, usuario_ip, usuario_registro) VALUES(:usuario_nombre_usuario, :usuario_contrasena, :usuario_email, :usuario_hash, :usuario_ip, now())');
+                $query_new_user_insert->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
+                $query_new_user_insert->bindValue(':usuario_contrasena', $usuario_contrasena, PDO::PARAM_STR);
+                $query_new_user_insert->bindValue(':usuario_email', $usuario_email, PDO::PARAM_STR);
+                $query_new_user_insert->bindValue(':usuario_hash', $usuario_hash, PDO::PARAM_STR);
+                $query_new_user_insert->bindValue(':usuario_ip', $_SERVER['REMOTE_ADDR'], PDO::PARAM_STR);
                 $query_new_user_insert->execute();
 
                 // id of new user
-                $user_id = $this->db_connection->lastInsertId();
+                $usuario_id = $this->db_connection->lastInsertId();
 
                 if ($query_new_user_insert) {
                     // send a verification email
-                    if ($this->sendVerificationEmail($user_id, $user_email, $user_activation_hash)) {
+                    if ($this->sendVerificationEmail($usuario_id, $usuario_email, $usuario_hash)) {
                         // when mail has been send successfully
                         $this->messages[] = MESSAGE_VERIFICATION_MAIL_SENT;
                         $this->registration_successful = true;
                     } else {
-                        // delete this users account immediately, as we could not send a verification email
-                        $query_delete_user = $this->db_connection->prepare('DELETE FROM users WHERE user_id=:user_id');
-                        $query_delete_user->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+                        // delete this wm_usuarios account immediately, as we could not send a verification email
+                        $query_delete_user = $this->db_connection->prepare('DELETE FROM wm_usuarios WHERE usuario_id=:usuario_id');
+                        $query_delete_user->bindValue(':usuario_id', $usuario_id, PDO::PARAM_INT);
                         $query_delete_user->execute();
 
                         $this->errors[] = MESSAGE_VERIFICATION_MAIL_ERROR;
@@ -166,7 +164,7 @@ class ModelRegistration
      * sends an email to the provided email address
      * @return boolean gives back true if mail has been sent, gives back false if no mail could been sent
      */
-    public function sendVerificationEmail($user_id, $user_email, $user_activation_hash)
+    public function sendVerificationEmail($usuario_id, $usuario_email, $usuario_hash)
     {
         $mail = new PHPMailer;
 
@@ -194,10 +192,10 @@ class ModelRegistration
 
         $mail->From = EMAIL_VERIFICATION_FROM;
         $mail->FromName = EMAIL_VERIFICATION_FROM_NAME;
-        $mail->AddAddress($user_email);
+        $mail->AddAddress($usuario_email);
         $mail->Subject = EMAIL_VERIFICATION_SUBJECT;
 
-        $link = ROUTER::create_action_url("account/register", array("id" => urlencode($user_id), "verification_code" => urlencode($user_activation_hash)));
+        $link = ROUTER::create_action_url("account/register", array("id" => urlencode($usuario_id), "verification_code" => urlencode($usuario_hash)));
             echo($link);
 
         // the link to your register.php, please set this value in config/email_verification.php
@@ -214,14 +212,14 @@ class ModelRegistration
     /**
      * checks the id/verification code combination and set the user's activation status to true (=1) in the database
      */
-    public function verifyNewUser($user_id, $user_activation_hash)
+    public function verifyNewUser($usuario_id, $usuario_hash)
     {
         // if database connection opened
         if ($this->databaseConnection()) {
             // try to update user with specified information
-            $query_update_user = $this->db_connection->prepare('UPDATE users SET user_active = 1, user_activation_hash = NULL WHERE user_id = :user_id AND user_activation_hash = :user_activation_hash');
-            $query_update_user->bindValue(':user_id', intval(trim($user_id)), PDO::PARAM_INT);
-            $query_update_user->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
+            $query_update_user = $this->db_connection->prepare('UPDATE wm_usuarios SET usuario_active_ahora = 1, usuario_hash = NULL WHERE usuario_id = :usuario_id AND usuario_hash = :usuario_hash');
+            $query_update_user->bindValue(':usuario_id', intval(trim($usuario_id)), PDO::PARAM_INT);
+            $query_update_user->bindValue(':usuario_hash', $usuario_hash, PDO::PARAM_STR);
             $query_update_user->execute();
 
             if ($query_update_user->rowCount() > 0) {
