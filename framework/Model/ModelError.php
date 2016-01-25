@@ -1,4 +1,20 @@
 <?php
+
+echo "<script src='http://code.jquery.com/jquery-1.8.2.js'></script>
+      <script src='http://code.jquery.com/ui/1.9.1/jquery-ui.js'></script>";
+echo "<script>
+    function abrir_dialog() {
+      $( '#dialog' ).dialog({
+          modal: true
+      });
+    };
+    </script>";
+    echo "<body>";
+    echo "<div id='dialog' title='Titulo dialog' style='display:none;'>";
+    echo "<p>Contenido de la ventana.</p>";
+    echo " <button onclick='abrir_dialog()'>Abrir ventana emergente</button>";
+    echo "</div>";
+
 define('E_FATAL',  E_ERROR | E_USER_ERROR | E_PARSE | E_CORE_ERROR | 
         E_COMPILE_ERROR | E_RECOVERABLE_ERROR);
 define('ENV', 'dev');

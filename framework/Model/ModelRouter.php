@@ -10,8 +10,11 @@ class ROUTER{
         $obj = new $controller;
         $layout = $obj->layout;
         $content = "../app/Views/$view.php";
-        echo "Vista: $view <br>";
-        echo "Layout: $layout";
+        $config= new Config();
+        if ($config->debug) {
+            echo "Vista: $view <br>";
+            echo "Layout: $layout";
+        }
         if (!file_exists("../app/Views/$layout.php")) {
            echo "La vista $layout no existe.";
         }else{

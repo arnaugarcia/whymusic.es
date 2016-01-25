@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "Model/ModelRouter.php";
 require "Model/ModelUrl.php";
 require "Model/ModelHtml.php";
@@ -17,11 +18,10 @@ if(IDIOMA::getUserLanguage()=="es" || IDIOMA::getUserLanguage()=="ca" || IDIOMA:
 /* Método para los errores */
 $config = new Config();
 $login = new ModelLogin();
-if ($login->isUserLoggedIn() == true) {
+if ($login->isUserLoggedIn() == true && $config->debug) {
             echo "Login status: Loggeado <br>";
-        }else{
-            echo "Loggin status: No Logged <br>";
-    }
+            echo  "Nombre de usuario: " . $login->getUsername() . "<br>";
+        }
 if ($config->debug){
     require "Model/ModelError.php";
 }else{
@@ -33,12 +33,16 @@ if (isset($_GET["ruta"])){
     $controller = $route[0];
     $action = $route[1];
     $class_controller = ucfirst($controller)."Controller";
-    echo "Contrloador: " . $class_controller . "<br>";
+    if ($config->debug) {
+            echo "Contrloador: " . $class_controller . "<br>";
+        }
     if (!file_exists("../app/Controllers/$class_controller.php")) {
        echo "El Contrloador $class_controller, no existe";
     }else{
         require "../app/Controllers/$class_controller.php";
-        echo "Accion: " . $action . "<br>";
+        if($config->debug){
+            echo "Accion: " . $action . "<br>";
+        }
         if (!class_exists($action)) {
             $obj = new $class_controller;
             call_user_func(array($obj, $action));

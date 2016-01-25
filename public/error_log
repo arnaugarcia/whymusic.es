@@ -228,3 +228,7 @@
 [22-Jan-2016 17:17:41 Europe/Madrid] PHP Warning:  require(Model/ErrorHandler.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 20
 [22-Jan-2016 17:17:41 Europe/Madrid] PHP Warning:  require(Model/ErrorHandler.php): failed to open stream: No such file or directory in /home/uqfhhbcn/public_html/framework/Model.php on line 20
 [22-Jan-2016 17:17:41 Europe/Madrid] PHP Fatal error:  require(): Failed opening required 'Model/ErrorHandler.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uqfhhbcn/public_html/framework/Model.php on line 20
+[23-Jan-2016 18:51:20 Europe/Madrid] PHP Fatal error:  Class 'Config' not found in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 2
+[24-Jan-2016 17:15:18 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/uqfhhbcn/public_html/framework/Model/ModelError.php on line 12
+[25-Jan-2016 17:10:43 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$config' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 3
+[25-Jan-2016 18:01:15 Europe/Madrid] PHP Parse error:  syntax error, unexpected '.' in /home/uqfhhbcn/public_html/framework/Model.php on line 23
