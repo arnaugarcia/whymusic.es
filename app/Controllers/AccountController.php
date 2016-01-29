@@ -42,5 +42,14 @@ class AccountController extends Config{
             );
         return ROUTER::show_view('account/user', array('meta' => $meta));
     }
+    public function edit(){
+        $meta = array(
+            'title' => 'WhyMusic · Edición',
+            'description' => 'Panel de edición de cuenta',
+            'keywords' => 'php, framework, mvc',
+            'robots' => 'All',
+            );
+        return ROUTER::show_view('account/edit', array('meta' => $meta));
+    }
 }
 

@@ -232,3 +232,16 @@
 [24-Jan-2016 17:15:18 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/uqfhhbcn/public_html/framework/Model/ModelError.php on line 12
 [25-Jan-2016 17:10:43 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$config' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelRouter.php on line 3
 [25-Jan-2016 18:01:15 Europe/Madrid] PHP Parse error:  syntax error, unexpected '.' in /home/uqfhhbcn/public_html/framework/Model.php on line 23
+[28-Jan-2016 15:23:24 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelRegistration.php on line 106
+[28-Jan-2016 17:53:00 Europe/Madrid] PHP Fatal error:  Call to a member function prepare() on null in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 730
+[28-Jan-2016 18:04:33 Europe/Madrid] PHP Fatal error:  Call to a member function query() on null in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 733
+[28-Jan-2016 18:37:47 Europe/Madrid] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ';' in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 739
+[28-Jan-2016 18:42:38 Europe/Madrid] PHP Fatal error:  Call to private method ModelLogin::getUserData() from context 'ROUTER' in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 3
+[28-Jan-2016 19:04:36 Europe/Madrid] PHP Parse error:  syntax error, unexpected '(', expecting ',' or ';' in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 48
+[29-Jan-2016 15:20:04 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 7
+[29-Jan-2016 15:20:19 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 7
+[29-Jan-2016 15:20:46 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 7
+[29-Jan-2016 15:21:35 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 7
+[29-Jan-2016 15:21:36 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 7
+[29-Jan-2016 15:39:52 Europe/Madrid] PHP Parse error:  syntax error, unexpected ';' in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 10
+[29-Jan-2016 16:30:14 Europe/Madrid] PHP Parse error:  syntax error, unexpected ',', expecting variable (T_VARIABLE) in /home/uqfhhbcn/public_html/framework/Model/ModelHtml.php on line 61

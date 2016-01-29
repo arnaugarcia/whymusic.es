@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
 * Clase encargada de manejar los idimas en la web utulizando constantes
 */

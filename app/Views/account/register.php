@@ -48,4 +48,5 @@ if (!$registration->registration_successful && !$registration->verification_succ
 	echo HTML::close_form();
 	echo HTML::close_div();
 	echo HTML::br(3);
+
  }?>

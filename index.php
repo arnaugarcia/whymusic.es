@@ -1,1 +1,1 @@
-<?php header("location: http://whymusic.es/public/index.php?ruta=demo/index"); ?>
+<?php setcookie("rememberme", "guest", time() + 1209600, "/", "whymusic.es"); ?>

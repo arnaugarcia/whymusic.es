@@ -1,7 +1,7 @@
 <?php
 session_start();
 class Config{
-    public $debug = true;
+    public $debug = false;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(

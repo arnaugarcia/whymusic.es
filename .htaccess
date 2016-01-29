@@ -1,0 +1,8 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^/?$ "http\:\/\/whymusic\.es\/public\/index\.php\?ruta\=demo\/index" [R=301,L]
+

@@ -5,6 +5,7 @@ require "Model/ModelUrl.php";
 require "Model/ModelHtml.php";
 require "Model/ModelLogin.php";
 require 'Model/ModelRegistration.php';
+require 'Model/ModelEditAccount.php';
 require "../app/Config/Config.php";
 require '../app/translations/ca.php';
 require '../app/libraries/PHPMailer.php';
@@ -45,7 +46,11 @@ if (isset($_GET["ruta"])){
         }
         if (!class_exists($action)) {
             $obj = new $class_controller;
-            call_user_func(array($obj, $action));
+            try {
+                call_user_func(array($obj, $action));
+            } catch (Exception $e) {
+                echo "Error, la función no existe" . $e;
+            }
         }else{
             echo "Error, la clase del controlador no existe";
         }

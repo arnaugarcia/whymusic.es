@@ -58,6 +58,15 @@ class HTML {
         }
         return "<button type='$type'$attr>$content</button>\n";
     }
+    static function select($name, $options=array()){
+        $opt = null;
+        foreach($options as $key => $val){
+            $opt .= "<option value='$val'>$key</option>";
+        }
+        return "<select $attr>
+                    $opt
+                </select> \n";
+    }
     static function radio($name, $value, $checked=false, $attributes=array()){
         $attr = null;
         foreach($attributes as $key => $val){

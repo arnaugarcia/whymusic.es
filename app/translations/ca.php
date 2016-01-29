@@ -45,6 +45,8 @@ define("MESSAGE_USERNAME_EMPTY", "El camp usuari estava buit");
 define("MESSAGE_USERNAME_EXISTS", "Ho sentim, aquest nom d'usuari ja està en ús. Si us plau escolliu-ne un altre.");
 define("MESSAGE_USERNAME_INVALID", "El nom d'usuari no s'ajusta a l'estructura de noms: només a-Z i els números estan permesos, de 2 a 64 caràcters");
 define("MESSAGE_USERNAME_SAME_LIKE_OLD_ONE", "Ho sentim, aquest nom d'usuari és el mateix que l'actual. Si us plau trieu-ne un altre.");
+define("MESSAGE_TIPO_USUARIO", 'El tipus de usuari no coincideix.');
+
 // views
 define("WORDING_BACK_TO_LOGIN", "Tornar a la pàgina d'inici de sessió");
 define("WORDING_CHANGE_EMAIL", "Canviar correu electrònic");

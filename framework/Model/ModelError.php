@@ -64,7 +64,6 @@ function handler( $errno, $errstr, $errfile, $errline) {
         case E_USER_DEPRECATED: // 16384 //
             $typestr = 'E_USER_DEPRECATED'; break;
     }
-    
      $myFile = $errfile;
      $lines = file($myFile);
      $content = null;

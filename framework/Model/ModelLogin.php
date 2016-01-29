@@ -147,7 +147,7 @@ class ModelLogin{
      * TODO: @devplanete This returns two different types. Maybe this is valid, but it feels bad. We should rework this.
      * TODO: @devplanete After some resarch I'm VERY sure that this is not good coding style! Please fix this.
      */
-    private function getUserData($usuario_nombre_usuario)
+    public function getUserData($usuario_nombre_usuario)
     {
         // if database connection opened
         if ($this->databaseConnection()) {
@@ -724,6 +724,18 @@ class ModelLogin{
     public function getUsername()
     {
         return $this->usuario_nombre_usuario;
+    }
+    public function getTypeOfUser()
+    {
+        if ($this->databaseConnection()) {
+            // get real token from database (and all other data)
+            $sth = $this->db_connection->prepare("SELECT usuario_id, usuario_tipo FROM wm_usuarios WHERE usuario_id = :usuario_id");
+            $sth->bindValue(':usuario_id', $_SESSION['usuario_id'], PDO::PARAM_INT);
+            $sth->execute();
+            // get result row (as an object)
+            $result_row = $sth->fetchObject();
+            return $result_row->usuario_tipo;
+        }
     }
 
     /**

@@ -33,7 +33,7 @@ class ModelRegistration
 
         // if we have such a POST request, call the registerNewUser() method
         if (isset($_POST["register"])) {
-            $this->registerNewUser($_POST['usuario_nombre_usuario'], $_POST['usuario_email'], $_POST['usuario_contrasena'], $_POST['usuario_contrasena_repeat']);
+            $this->registerNewUser($_POST['usuario_nombre_usuario'], $_POST['usuario_email'], $_POST['usuario_contrasena'], $_POST['usuario_contrasena_repeat'],$_POST['usuario_tipo']);
         }
         //if we have such a GET request, call the verifyNewUser() method
         else if (isset($_GET["id"]) && isset($_GET["verification_code"])) {
@@ -72,7 +72,7 @@ class ModelRegistration
      * handles the entire registration process. checks all error possibilities, and creates a new user in the database if
      * everything is fine
      */
-    private function registerNewUser($usuario_nombre_usuario, $usuario_email, $usuario_contrasena, $usuario_contrasena_repeat)
+    private function registerNewUser($usuario_nombre_usuario, $usuario_email, $usuario_contrasena, $usuario_contrasena_repeat, $usuario_tipo)
     {
         // we just remove extra space on username and email
         $usuario_nombre_usuario  = trim($usuario_nombre_usuario);
@@ -98,7 +98,8 @@ class ModelRegistration
             $this->errors[] = MESSAGE_EMAIL_TOO_LONG;
         } elseif (!filter_var($usuario_email, FILTER_VALIDATE_EMAIL)) {
             $this->errors[] = MESSAGE_EMAIL_INVALID;
-
+        } elseif ($usuario_tipo!='fan' && $usuario_tipo!='musico' && $usuario_tipo!='local') {
+                $this->errors[] = MESSAGE_TIPO_USUARIO;
         // finally if all the above checks are ok
         } else if ($this->databaseConnection()) {
             // check if username or email already exists
@@ -128,12 +129,13 @@ class ModelRegistration
                 $usuario_hash = sha1(uniqid(mt_rand(), true));
 
                 // write new wm_usuarios data into database
-                $query_new_user_insert = $this->db_connection->prepare('INSERT INTO wm_usuarios (usuario_nombre_usuario, usuario_contrasena, usuario_email, usuario_hash, usuario_ip, usuario_registro) VALUES(:usuario_nombre_usuario, :usuario_contrasena, :usuario_email, :usuario_hash, :usuario_ip, now())');
+                $query_new_user_insert = $this->db_connection->prepare('INSERT INTO wm_usuarios (usuario_nombre_usuario, usuario_contrasena, usuario_email, usuario_hash, usuario_ip, usuario_tipo, usuario_registro) VALUES(:usuario_nombre_usuario, :usuario_contrasena, :usuario_email, :usuario_hash, :usuario_ip, :usuario_tipo, now())');
                 $query_new_user_insert->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
                 $query_new_user_insert->bindValue(':usuario_contrasena', $usuario_contrasena, PDO::PARAM_STR);
                 $query_new_user_insert->bindValue(':usuario_email', $usuario_email, PDO::PARAM_STR);
                 $query_new_user_insert->bindValue(':usuario_hash', $usuario_hash, PDO::PARAM_STR);
                 $query_new_user_insert->bindValue(':usuario_ip', $_SERVER['REMOTE_ADDR'], PDO::PARAM_STR);
+                $query_new_user_insert->bindValue(':usuario_tipo', $usuario_tipo, PDO::PARAM_STR);
                 $query_new_user_insert->execute();
 
                 // id of new user
