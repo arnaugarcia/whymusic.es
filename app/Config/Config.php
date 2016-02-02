@@ -1,32 +1,10 @@
 <?php
 session_start();
-class Config{
-    public $debug = false;
-    public $layout = "layouts/layout";
-    /*public $rules = array(
-         "demo/index" => array(
-             "?r=demo/index" => "index",
-             "?r=demo/index&id=$1" => "index/id/([0-9]+)",
-             "?r=demo/index&id=$1&title=$2" => "index/id/([0-9]+)/title/([a-zA-Z]+)",
-         ),
-         "demo/login" => array(
-             "?r=demo/login" => "login",
-         ),
-     );
-    ^
-    |
-    |
-    |
-    LA PUTA MIERDA DE ARRAY PARA EL MÉTODO GET NO SIRVE PARA NADA. ATT: TU PUTO CEREBRO*/
-}
-?>
-<?php
-/*Conexion con la base de datos*/
-define("DB_HOST", "localhost:3306");
-define("DB_NAME", "uqfhhbcn_whymusic");
-define("DB_USER", "uqfhhbcn");
-define("DB_PASS", "soserexo");
-
+/*Conexion base de datos*/
+        define("DB_HOST", "localhost:3306");
+        define("DB_NAME", "uqfhhbcn_whymusic");
+        define("DB_USER", "uqfhhbcn");
+        define("DB_PASS", "soserexo");
 /*Cookies y histórias*/
 define("COOKIE_RUNTIME", 1209600);
 define("COOKIE_DOMAIN", ".whymusic.es");
@@ -60,3 +38,24 @@ define("EMAIL_VERIFICATION_SUBJECT", "Activación de la cuenta en WhyMusic");
 define("EMAIL_VERIFICATION_CONTENT", "Haz click en este enlace en activar tu cuenta:");
 /*Hash Factor*/
 define("HASH_COST_FACTOR", "10");
+
+class Config{
+    public $debug = true;
+    public $layout = "layouts/layout";
+    /*public $rules = array(
+         "demo/index" => array(
+             "?r=demo/index" => "index",
+             "?r=demo/index&id=$1" => "index/id/([0-9]+)",
+             "?r=demo/index&id=$1&title=$2" => "index/id/([0-9]+)/title/([a-zA-Z]+)",
+         ),
+         "demo/login" => array(
+             "?r=demo/login" => "login",
+         ),
+     );
+    ^
+    |
+    |
+    |
+    LA PUTA MIERDA DE ARRAY PARA EL MÉTODO GET NO SIRVE PARA NADA. ATT: TU PUTO CEREBRO*/
+}
+?>

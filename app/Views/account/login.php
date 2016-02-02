@@ -31,7 +31,7 @@ if ($login->isUserLoggedIn() == true) {
 	echo HTML::label("usuario_recuerdame","Recordar session?");
 	echo HTML::checkbox("usuario_recuerdame","usuario_recuerdame",false);
 
-	echo HTML::button_HTML5("submit","Entrar!",array("name" => "login"));
+	echo HTML::button_HTML5("submit","Entrar!","login");
 
 	echo HTML::close_form();
 	echo HTML::close_div();

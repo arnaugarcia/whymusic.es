@@ -22,7 +22,7 @@ class HTML {
         foreach ($attributes as $key => $val){
             $att .= " $key='$val'";
         }
-        return "<div$att>\n";
+        return "<div $att>\n";
     }
     static function close_div(){
         return "</div>\n";
@@ -51,19 +51,19 @@ class HTML {
         }
         return "<label for='$for'$attr>$content</label>\n";
     }
-    static function button_HTML5($type, $content, $attributes=array()){
+    static function button_HTML5($type, $content, $name, $attributes=array()){
         $attr = null;
         foreach($attributes as $key => $val){
             $attr .= " $key='$val'";
         }
-        return "<button type='$type'$attr>$content</button>\n";
+        return "<button type='$type' name='$name' $attr>$content</button>\n";
     }
     static function select($name, $options=array()){
         $opt = null;
         foreach($options as $key => $val){
-            $opt .= "<option value='$val'>$key</option>";
+            $opt .= "<option value='$val' name='$val'>$key</option>";
         }
-        return "<select $attr>
+        return "<select name='$name'>
                     $opt
                 </select> \n";
     }

@@ -1,9 +1,35 @@
 <?php
-/**
-* Please note: we can use unencoded characters like ö, é etc here as we use the html5 doctype with utf8 encoding
-* in the application's header (in views/_header.php). To add new languages simply copy this file,
-* and create a language switch in your root files.
-*/
+/*Constantes globales de la app*/
+define("MESSAGE_REDIRECT", "En pocs segons seràs redirecionat");
+define("MESSAGE_CORRECT", "Tot correcte!");
+define("MESSAGE_CORRECT_MOD", "Dades modificades amb èxit!");
+define("MESSAGE_ERROR_SQL", "Hi ha hagut un error enla consulta SQL, contacti amb l'administrador");
+/*Menús y demàs*/
+define("MENU_HOME", "Inici");
+define("MENU_LOGIN", "Entrar");
+define("MENU_REGISTER", "Registre");
+/*Constantes d'error dels formularis */
+define('MESSAGE_FORM_NOMBRE_EMPTY', "El camp Nom està buit");
+define('MESSAGE_FORM_APELLIDO_EMPTY', "Un dels camps cognom està buit");
+define('MESSAGE_FORM_IDIOMA_EMPTY', "El camp idioma no és válid");
+define('MESSAGE_FORM_TELEFONO_EMPTY', "El campo teléfono està vacío");
+define('MESSAGE_FORM_IDIOMA', "El camp idioma no es correcte");
+define('MESSAGE_FROM_NOMBRE_LENGHT', "Nom d'usuari incorrecte, la seva allargada té que ser entre 2 i 64 ");
+define('MESSAGE_FORM_NOMBRE_CARACTER', "Nom d'usuari incorrecte, no pot contindre símbols");
+define('MESSAGE_FORM_TELEFONO_INVALID', "El camp telèfon ha de ser d'aquest estil (123456789)");
+/*Vistas*/
+/*Vistas Formaularios campos*/
+define("WORDING_NOMBRE", "Nom");
+define("WORDING_APELLIDO1", "Primer cognom");
+define("WORDING_APELLIDO2", "Segon cognom");
+define("WORDING_IDIOMA", 'Idioma');
+define("WORDING_TELEFON", 'Telèfon');
+/*Vistas 
+/*Botones en la applicación*/
+define('BUTTON_MOD_DATA', "Modificar dades");
+
+
+
 // login & registration classes
 define("MESSAGE_ACCOUNT_NOT_ACTIVATED", "El seu compte encara no està activat. Si us plau, feu clic a l'enllaç de confirmació en el correu electrònic.");
 define("MESSAGE_CAPTCHA_WRONG", "Captcha incorrecte!");
@@ -76,5 +102,9 @@ define("WORDING_REMEMBER_ME", "Mantén-me connectat (durant 2 setmanes)"); //"No
 define("WORDING_REQUEST_PASSWORD_RESET", "Sol·licitar un restabliment de contrasenya. Introdueixi el seu nom d'usuari i obtindràs un correu electrònic amb les instruccions:");
 define("WORDING_RESET_PASSWORD", "Canviar la contrasenya");
 define("WORDING_SUBMIT_NEW_PASSWORD", "Enviar contrasenya nova");
+define("WORDING_USERNAME", "Nom");
 define("WORDING_USERNAME", "Nom d'usuari");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "Has iniciat la sessió com a "); //"T'has connectat com a";
+
+//constants pròpies
+

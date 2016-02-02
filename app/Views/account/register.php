@@ -44,7 +44,7 @@ if (!$registration->registration_successful && !$registration->verification_succ
 	echo HTML::input("password","usuario_contrasena_repeat",null,array("placeholder" => "········"));
 	echo HTML::br(2);
 
-	echo HTML::button_HTML5("submit","Regístrame!",array("name" => "register"));
+	echo HTML::button_HTML5("submit","Regístrame!","register");
 	echo HTML::close_form();
 	echo HTML::close_div();
 	echo HTML::br(3);

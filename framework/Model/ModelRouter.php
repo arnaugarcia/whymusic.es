@@ -39,6 +39,8 @@ class ROUTER{
             }
         }
         echo "<meta http-equiv='Refresh' content='$time; url=index.php?ruta=". $r."".$p."'/>";
+        echo HTML::br(2);
+        echo MESSAGE_REDIRECT;
         //header("location: index.php?ruta=".$r."".$p."");
     }
     static function load_view($v){

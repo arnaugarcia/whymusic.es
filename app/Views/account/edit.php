@@ -1,6 +1,6 @@
 <h1>Edición del perfil</h1>
 <?php $login = new ModelLogin();  ?>
-Tipo de cuenta: <?php echo $login->getTypeOfUser();?>
+Tipo de cuenta: <?php echo $login->getTypeOfUser(); echo HTML::br(1);?>
 <br>Cambiar tipo de cuenta:
 <select>
 	<option title="Seleciona una opción">Seleciona una opción</option>
@@ -9,6 +9,7 @@ Tipo de cuenta: <?php echo $login->getTypeOfUser();?>
 	<option title="Local">Local</option>
 </select>
 <?php
+echo HTML::br(2);
 $registro = new EditAccount();
 if($login->getTypeOfUser()=="musico"){
 	$registro->formMusico();

@@ -6,7 +6,7 @@ if (isset($_POST["usuario_nombre"])) {
 	echo HTML::open_form(ROUTER::create_action_url("demo/index"), "POST","form");
 	echo HTML::label("usuario_nombre","Introduce tu nombre");
 	echo HTML::input("text","usuario_nombre");
-	echo HTML::button_HTML5("submit","Enviar!");
+	echo HTML::button_HTML5("submit","Enviar!","boton");
 	echo $_POST['usuario_nombre'];
 	echo HTML::close_form();
 }

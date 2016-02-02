@@ -118,7 +118,7 @@ class ModelLogin{
      * Checks if database connection is opened. If not, then this method tries to open it.
      * @return bool Success status of the database connecting process
      */
-    private function databaseConnection()
+    public function databaseConnection()
     {
         // if connection already exists
         if ($this->db_connection != null) {
@@ -147,7 +147,7 @@ class ModelLogin{
      * TODO: @devplanete This returns two different types. Maybe this is valid, but it feels bad. We should rework this.
      * TODO: @devplanete After some resarch I'm VERY sure that this is not good coding style! Please fix this.
      */
-    public function getUserData($usuario_nombre_usuario)
+    private function getUserData($usuario_nombre_usuario)
     {
         // if database connection opened
         if ($this->databaseConnection()) {
@@ -157,6 +157,21 @@ class ModelLogin{
             $query_user->execute();
             // get result row (as an object)
             return $query_user->fetchObject();
+        } else {
+            return false;
+        }
+    }
+    public function getFormData($usuario_nombre_usuario,$campoUsuario)
+    {
+        // if database connection opened
+        if ($this->databaseConnection()) {
+            // database query, getting all the info of the selected user
+            $query_user = $this->db_connection->prepare('SELECT '.$campoUsuario.' FROM wm_usuarios WHERE usuario_nombre_usuario = :usuario_nombre_usuario');
+            $query_user->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
+            $query_user->execute();
+            // get result row (as an object)
+            $result_row = $query_user->fetchObject();
+            return $result_row->$campoUsuario;
         } else {
             return false;
         }

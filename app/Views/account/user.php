@@ -1,4 +1,4 @@
-<h1>Página de logout</h1>
+<h1>Panel de usuario</h1>
 <?php
 $login = new ModelLogin();
 // if you need the user's information, just put them into the $_SESSION variable and output them here
