@@ -1,10 +1,13 @@
 <?php
 session_start();
+define("RUTA_INDEX", "demo/index");
+define("RUTA_LOGIN", "account/login");
+define("RUTA_REGISTER", "account/register");
 /*Conexion base de datos*/
-        define("DB_HOST", "localhost:3306");
-        define("DB_NAME", "uqfhhbcn_whymusic");
-        define("DB_USER", "uqfhhbcn");
-        define("DB_PASS", "soserexo");
+define("DB_HOST", "localhost:3306");
+define("DB_NAME", "uqfhhbcn_whymusic");
+define("DB_USER", "uqfhhbcn");
+define("DB_PASS", "soserexo");
 /*Cookies y histórias*/
 define("COOKIE_RUNTIME", 1209600);
 define("COOKIE_DOMAIN", ".whymusic.es");
@@ -25,8 +28,8 @@ define("EMAIL_SMTP_ENCRYPTION", null);
 define("EMAIL_PASSWORDRESET_URL", URL::base_url().ROUTER::create_action_url("account/register"));
 define("EMAIL_PASSWORDRESET_FROM", "no-reply@whymusic.es");
 define("EMAIL_PASSWORDRESET_FROM_NAME", "WhyMusic");
-define("EMAIL_PASSWORDRESET_SUBJECT", "Password reset for WhyMusic");
-define("EMAIL_PASSWORDRESET_CONTENT", "Please click on this link to reset your password:");
+define("EMAIL_PASSWORDRESET_SUBJECT", "Reseteo de contraseña para WhyMusic");
+define("EMAIL_PASSWORDRESET_CONTENT", "haz click en el enalce para resetar tu cuenta:");
 /**
  * Configuration for: verification email data
  * Set the absolute URL to register.php, necessary for email verification links
@@ -40,7 +43,8 @@ define("EMAIL_VERIFICATION_CONTENT", "Haz click en este enlace en activar tu cue
 define("HASH_COST_FACTOR", "10");
 
 class Config{
-    public $debug = true;
+    public $appName = "WhyMusic";
+    public $debug = false;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(

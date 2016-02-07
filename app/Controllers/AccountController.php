@@ -1,11 +1,6 @@
 <?php
 class AccountController extends Config{
-    public $layout = "layouts/loginlayout";
-    /*if (isset(ModelLogin::isUserLoggedIn() == true)) {
-        AccountController::user();
-    }else{
-        AccountController::login();
-    }*/
+    public $layout = "layouts/indexlayout";
     public function login(){
         $meta = array(
             'title' => 'WhyMusic · Login',
@@ -22,7 +17,12 @@ class AccountController extends Config{
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',
             );
-        return ROUTER::show_view('account/register', array('meta' => $meta));
+        $login = new ModelLogin();
+        if ($login->isUserLoggedIn() == true) {
+            AccountController::user();
+        }else{
+            return ROUTER::show_view('account/register', array('meta' => $meta));
+        }
     }
     public function logout(){
         $meta = array(
@@ -31,7 +31,12 @@ class AccountController extends Config{
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',
             );
-        return ROUTER::show_view('account/logout', array('meta' => $meta));
+        $login = new ModelLogin();
+        if ($login->isUserLoggedIn() == true) {
+            AccountController::login();
+        }else{
+            return ROUTER::show_view('account/logout', array('meta' => $meta));
+        }
     }
         public function user(){
         $meta = array(
@@ -40,7 +45,12 @@ class AccountController extends Config{
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',
             );
-        return ROUTER::show_view('account/user', array('meta' => $meta));
+        $login = new ModelLogin();
+        if ($login->isUserLoggedIn() == true) {
+            return ROUTER::show_view('account/user', array('meta' => $meta));
+        }else{
+            return ROUTER::show_view('account/login', array('meta' => $meta));
+        }
     }
     public function edit(){
         $meta = array(
@@ -49,7 +59,13 @@ class AccountController extends Config{
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',
             );
-        return ROUTER::show_view('account/edit', array('meta' => $meta));
+        $error = null;
+        $login = new ModelLogin();
+        if ($login->isUserLoggedIn() == true) {
+            return ROUTER::show_view('account/edit', array('meta' => $meta, 'error' => $error));
+        }else{
+            return ROUTER::show_view('account/login', array('meta' => $meta));
+        }
     }
 }
 

@@ -1,7 +1,6 @@
 <?php
-
 class DemoController extends Config{
-    public $layout = "layouts/loginlayout";
+    public $layout = "layouts/indexlayout";
     public function index(){
         $meta = array
             (

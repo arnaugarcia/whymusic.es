@@ -10,6 +10,7 @@ Tipo de cuenta: <?php echo $login->getTypeOfUser(); echo HTML::br(1);?>
 </select>
 <?php
 echo HTML::br(2);
+echo $error;
 $registro = new EditAccount();
 if($login->getTypeOfUser()=="musico"){
 	$registro->formMusico();

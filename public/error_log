@@ -282,3 +282,16 @@
 [02-Feb-2016 19:56:30 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in /home/uqfhhbcn/public_html/app/translations/ca.php on line 7
 [02-Feb-2016 20:16:02 Europe/Madrid] PHP Fatal error:  Class 'URL' not found in /home/uqfhhbcn/public_html/app/Config/Config.php on line 25
 [02-Feb-2016 20:40:44 Europe/Madrid] PHP Parse error:  syntax error, unexpected ':' in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 52
+[02-Feb-2016 21:58:32 Europe/Madrid] PHP Fatal error:  Class 'LoginController' not found in /home/uqfhhbcn/public_html/framework/Model.php on line 49
+[02-Feb-2016 22:00:08 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 6
+[02-Feb-2016 22:00:09 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 6
+[02-Feb-2016 22:02:09 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in /home/uqfhhbcn/public_html/app/Config/Config.php on line 7
+[02-Feb-2016 22:06:36 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 21
+[07-Feb-2016 15:07:01 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/app/Controllers/AccountController.php on line 4
+[07-Feb-2016 15:09:16 Europe/Madrid] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/uqfhhbcn/public_html/app/Controllers/AccountController.php on line 20
+[07-Feb-2016 15:10:50 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /home/uqfhhbcn/public_html/app/Controllers/AccountController.php on line 4
+[07-Feb-2016 15:10:56 Europe/Madrid] PHP Parse error:  syntax error, unexpected '(', expecting ',' or ';' in /home/uqfhhbcn/public_html/app/Controllers/AccountController.php on line 4
+[07-Feb-2016 15:47:39 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 9
+[07-Feb-2016 15:50:55 Europe/Madrid] PHP Fatal error:  Class 'ModelEditAccount' not found in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 12
+[07-Feb-2016 16:38:52 Europe/Madrid] PHP Fatal error:  Class 'AccountController' not found in /home/uqfhhbcn/public_html/framework/Model.php on line 50
+[07-Feb-2016 16:42:36 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE) in /home/uqfhhbcn/public_html/app/Controllers/AccountController.php on line 70

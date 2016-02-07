@@ -14,6 +14,7 @@ require "Model/ModelLogin.php";
 require 'Model/ModelRegistration.php';
 require 'Model/ModelEditAccount.php';
 require 'Model/ModelDB.php';
+require 'Model/ModelFormValidate.php';
 require "../app/Config/Config.php";
 require '../app/libraries/PHPMailer.php';
 
