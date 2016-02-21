@@ -161,13 +161,13 @@ class ModelLogin{
             return false;
         }
     }
-    public function getFormData($usuario_nombre_usuario,$campoUsuario)
+    public function getUserDataCampo($usuario_id,$campoUsuario)
     {
         // if database connection opened
         if ($this->databaseConnection()) {
             // database query, getting all the info of the selected user
-            $query_user = $this->db_connection->prepare('SELECT '.$campoUsuario.' FROM wm_usuarios WHERE usuario_nombre_usuario = :usuario_nombre_usuario');
-            $query_user->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
+            $query_user = $this->db_connection->prepare('SELECT '.$campoUsuario.' FROM wm_usuarios WHERE usuario_id = :usuario_id');
+            $query_user->bindValue(':usuario_id', $usuario_id, PDO::PARAM_STR);
             $query_user->execute();
             // get result row (as an object)
             $result_row = $query_user->fetchObject();
@@ -752,7 +752,10 @@ class ModelLogin{
             return $result_row->usuario_tipo;
         }
     }
-
+    public function getUserId()
+    {
+        return $_SESSION['usuario_id'];
+    }
     /**
      * Get either a Gravatar URL or complete image tag for a specified email address.
      * Gravatar is the #1 (free) provider for email address based global avatar hosting.

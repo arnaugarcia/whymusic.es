@@ -44,7 +44,7 @@ define("HASH_COST_FACTOR", "10");
 
 class Config{
     public $appName = "WhyMusic";
-    public $debug = false;
+    public $debug = true;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(

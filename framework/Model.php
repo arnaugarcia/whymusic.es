@@ -12,9 +12,10 @@ require "Model/ModelUrl.php";
 require "Model/ModelHtml.php";
 require "Model/ModelLogin.php";
 require 'Model/ModelRegistration.php';
-require 'Model/ModelEditAccount.php';
+require 'Model/ModelAccount.php';
 require 'Model/ModelDB.php';
 require 'Model/ModelFormValidate.php';
+require 'Model/ModelAdminPanel.php';
 require "../app/Config/Config.php";
 require '../app/libraries/PHPMailer.php';
 

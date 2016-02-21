@@ -5,12 +5,16 @@ $login = new ModelLogin();
 if(isset($login)) {
     if($login->errors) {
         foreach ($login->errors as $error) {
-            echo $error;
+            echo HTML::open_div(array("class" => "form-group has-error"));
+            echo HTML::label("usuario_nombre_usuario",$error, array("class" => "control-label"));
+            echo HTML::close_div();
         }
     }
     if($login->messages) {
         foreach ($login->messages as $message) {
-            echo $message;
+           echo HTML::open_div(array("class" => "form-group has-error"));
+           echo HTML::label("usuario_nombre_usuario",$message, array("class" => "control-label"));
+           echo HTML::close_div();
         }
     }
 }

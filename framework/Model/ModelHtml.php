@@ -65,7 +65,16 @@ class HTML {
         }
         return "<select name='$name'>
                     $opt
-                </select> \n";
+                </select>\n";
+    }
+    static function selectArray($name, $options=array()){
+        $opt = null;
+        foreach($options as $key => $val){
+            $opt .= "<option value='$key' name='$key'>$val</option>";
+        }
+        return "<select name='$name'>
+                    $opt
+                </select>\n";
     }
     static function radio($name, $value, $checked=false, $attributes=array()){
         $attr = null;

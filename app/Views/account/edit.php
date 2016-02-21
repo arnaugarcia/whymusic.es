@@ -11,16 +11,12 @@ Tipo de cuenta: <?php echo $login->getTypeOfUser(); echo HTML::br(1);?>
 <?php
 echo HTML::br(2);
 echo $error;
-$registro = new EditAccount();
-if($login->getTypeOfUser()=="musico"){
-	$registro->formMusico();
-	}elseif ($login->getTypeOfUser()=="fan") {
-		formFan();
-	}elseif ($login->getTypeOfUser()=="local") {
-		formLocal();
-	}elseif ($login->getTypeOfUser()=="administrador") {
-		formAdmin();
-	}else{
-		echo "What the duck?";
-	}
+$EditAccount= new EditAccount();
+if ($login->isUserLoggedIn()=="true" && ($login->getTypeOfUser()=="musico" || $login->getTypeOfUser()=="fan" || $login->getTypeOfUser()=="local")) {
+	$EditAccount->usuarioEdit($login->getUserId(),$login->getTypeOfUser());
+}else if ($login->getTypeOfUser()=="administrador") {
+	$EditAccount->usuarioEdit($_SESSION['usuario_id_edit'],$_SESSION['usuario_tipo_edit']);
+}else {
+	echo "No tienes permisos para estar aquí";
+}
 ?>

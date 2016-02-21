@@ -295,3 +295,82 @@
 [07-Feb-2016 15:50:55 Europe/Madrid] PHP Fatal error:  Class 'ModelEditAccount' not found in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 12
 [07-Feb-2016 16:38:52 Europe/Madrid] PHP Fatal error:  Class 'AccountController' not found in /home/uqfhhbcn/public_html/framework/Model.php on line 50
 [07-Feb-2016 16:42:36 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE) in /home/uqfhhbcn/public_html/app/Controllers/AccountController.php on line 70
+[12-Feb-2016 17:52:33 Europe/Madrid] PHP Parse error:  syntax error, unexpected ';' in /home/uqfhhbcn/public_html/app/Views/layouts/indexlayout.php on line 109
+[12-Feb-2016 17:55:09 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[16-Feb-2016 19:57:05 Europe/Madrid] PHP Fatal error:  Using $this when not in object context in /home/uqfhhbcn/public_html/framework/Model/ModelDB.php on line 7
+[16-Feb-2016 19:57:32 Europe/Madrid] PHP Fatal error:  Call to undefined method PDO::databaseConnection() in /home/uqfhhbcn/public_html/framework/Model/ModelDB.php on line 7
+[16-Feb-2016 20:51:07 Europe/Madrid] PHP Fatal error:  Call to undefined function DB() in /home/uqfhhbcn/public_html/framework/Model/ModelDB.php on line 7
+[16-Feb-2016 20:51:24 Europe/Madrid] PHP Fatal error:  Class 'DB' not found in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 9
+[16-Feb-2016 21:01:05 Europe/Madrid] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 86
+[16-Feb-2016 21:14:06 Europe/Madrid] PHP Fatal error:  Call to undefined method DB::prepare() in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 86
+[17-Feb-2016 17:51:38 Europe/Madrid] PHP Fatal error:  Class 'Controllers' not found in /home/uqfhhbcn/public_html/app/Controllers/AdminController.php on line 4
+[17-Feb-2016 19:12:39 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 3
+[17-Feb-2016 19:13:14 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 3
+[17-Feb-2016 19:13:53 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 3
+[17-Feb-2016 19:21:50 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:31:27 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:32:48 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 83
+[17-Feb-2016 19:33:07 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:33:50 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:35:06 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:35:48 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:42:22 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /home/uqfhhbcn/public_html/framework/Model/ModelEditAccount.php on line 7
+[17-Feb-2016 19:45:34 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[17-Feb-2016 19:46:33 Europe/Madrid] PHP Fatal error:  Call to undefined function formAdmin() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 22
+[18-Feb-2016 18:15:30 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 7
+[18-Feb-2016 18:15:37 Europe/Madrid] PHP Parse error:  syntax error, unexpected '(', expecting ',' or ';' in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 7
+[18-Feb-2016 18:15:42 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 7
+[18-Feb-2016 18:15:49 Europe/Madrid] PHP Parse error:  syntax error, unexpected '$login' (T_VARIABLE), expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 7
+[18-Feb-2016 18:16:02 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 7
+[18-Feb-2016 18:58:23 Europe/Madrid] PHP Parse error:  syntax error, unexpected '}' in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:05:31 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:06:14 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:20:20 Europe/Madrid] PHP Fatal error:  Cannot redeclare ModelLogin::getTypeOfUser() in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 755
+[18-Feb-2016 19:22:05 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 16
+[18-Feb-2016 19:22:32 Europe/Madrid] PHP Fatal error:  Call to undefined method DB::query() in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 12
+[18-Feb-2016 19:24:38 Europe/Madrid] PHP Fatal error:  Call to a member function bindValue() on boolean in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 13
+[18-Feb-2016 19:25:11 Europe/Madrid] PHP Fatal error:  Call to a member function bindValue() on boolean in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 13
+[18-Feb-2016 19:27:06 Europe/Madrid] PHP Fatal error:  Call to a member function bindValue() on boolean in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 13
+[18-Feb-2016 19:28:16 Europe/Madrid] PHP Fatal error:  Call to undefined method DB::execute() in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 14
+[18-Feb-2016 19:28:30 Europe/Madrid] PHP Fatal error:  Call to a member function execute() on boolean in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 14
+[18-Feb-2016 19:31:49 Europe/Madrid] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:33:12 Europe/Madrid] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:33:32 Europe/Madrid] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:34:04 Europe/Madrid] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:36:04 Europe/Madrid] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 15
+[18-Feb-2016 19:53:25 Europe/Madrid] PHP Fatal error:  Call to undefined method showDataAccount::getDataMusico() in /home/uqfhhbcn/public_html/app/Views/account/user.php on line 5
+[18-Feb-2016 20:17:31 Europe/Madrid] PHP Fatal error:  Call to undefined method showDataAccount::getUserData() in /home/uqfhhbcn/public_html/app/Views/account/user.php on line 5
+[18-Feb-2016 20:24:43 Europe/Madrid] PHP Fatal error:  Call to undefined method showDataAccount::getUserData() in /home/uqfhhbcn/public_html/app/Views/account/user.php on line 5
+[18-Feb-2016 20:25:38 Europe/Madrid] PHP Fatal error:  Call to undefined method showDataAccount::getUserData() in /home/uqfhhbcn/public_html/app/Views/account/user.php on line 5
+[18-Feb-2016 20:27:56 Europe/Madrid] PHP Fatal error:  Class 'showDataAccount' not found in /home/uqfhhbcn/public_html/app/Views/account/user.php on line 4
+[18-Feb-2016 20:32:35 Europe/Madrid] PHP Fatal error:  Cannot redeclare ModelLogin::getUserData() in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 179
+[18-Feb-2016 20:33:09 Europe/Madrid] PHP Fatal error:  Cannot redeclare ModelLogin::getUserData() in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 179
+[18-Feb-2016 20:33:12 Europe/Madrid] PHP Fatal error:  Cannot redeclare ModelLogin::getUserData() in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 179
+[19-Feb-2016 17:42:29 Europe/Madrid] PHP Fatal error:  Class 'ROUETR' not found in /home/uqfhhbcn/public_html/app/Views/account/user.php on line 30
+[19-Feb-2016 18:06:14 Europe/Madrid] PHP Fatal error:  Class 'Config' not found in /home/uqfhhbcn/public_html/framework/Model.php on line 9
+[19-Feb-2016 18:06:33 Europe/Madrid] PHP Fatal error:  Class 'URL' not found in /home/uqfhhbcn/public_html/app/Config/Config.php on line 28
+[19-Feb-2016 19:48:29 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 6
+[19-Feb-2016 19:48:29 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 6
+[20-Feb-2016 12:15:42 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 6
+[20-Feb-2016 16:58:17 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 6
+[20-Feb-2016 16:59:06 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formAdmin() in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 6
+[20-Feb-2016 17:07:06 Europe/Madrid] PHP Fatal error:  Class 'AdminPanel' not found in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 3
+[20-Feb-2016 17:07:07 Europe/Madrid] PHP Fatal error:  Class 'AdminPanel' not found in /home/uqfhhbcn/public_html/app/Views/admin/admin.php on line 3
+[20-Feb-2016 17:14:26 Europe/Madrid] PHP Fatal error:  Class 'ModelDB' not found in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 9
+[20-Feb-2016 17:24:26 Europe/Madrid] PHP Fatal error:  Call to undefined method PDOStatement::query() in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 18
+[20-Feb-2016 17:24:44 Europe/Madrid] PHP Fatal error:  Call to undefined method PDOStatement::query() in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 18
+[20-Feb-2016 18:09:49 Europe/Madrid] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 17
+[20-Feb-2016 18:15:20 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 15
+[20-Feb-2016 18:15:52 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 15
+[20-Feb-2016 18:16:08 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 15
+[20-Feb-2016 18:23:30 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:23:37 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:24:14 Europe/Madrid] PHP Parse error:  syntax error, unexpected '.' in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:24:28 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:26:42 Europe/Madrid] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:27:59 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'Editar' (T_STRING) in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:28:30 Europe/Madrid] PHP Parse error:  syntax error, unexpected ')' in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[20-Feb-2016 18:29:10 Europe/Madrid] PHP Parse error:  syntax error, unexpected '.' in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 19
+[21-Feb-2016 18:39:52 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formEditMusico() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 16
+[21-Feb-2016 18:50:41 Europe/Madrid] PHP Fatal error:  Call to undefined method ModelLogin::getFormData() in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 79
+[21-Feb-2016 18:54:59 Europe/Madrid] PHP Fatal error:  Call to undefined method ModelLogin::getFormData() in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 87

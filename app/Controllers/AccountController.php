@@ -13,7 +13,7 @@ class AccountController extends Config{
     public function register(){
         $meta = array(
             'title' => 'WhyMusic · Register',
-            'description' => 'Login de WhyMusic.es',
+            'description' => 'Regsitro de WhyMusic.es',
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',
             );
@@ -40,8 +40,8 @@ class AccountController extends Config{
     }
         public function user(){
         $meta = array(
-            'title' => 'WhyMusic · Logout',
-            'description' => 'Logout de WhyMusic.es',
+            'title' => 'WhyMusic · Panel de usuario',
+            'description' => 'Panel de usuario de WhyMusic.es',
             'keywords' => 'php, framework, mvc',
             'robots' => 'All',
             );
