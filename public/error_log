@@ -374,3 +374,19 @@
 [21-Feb-2016 18:39:52 Europe/Madrid] PHP Fatal error:  Call to undefined method EditAccount::formEditMusico() in /home/uqfhhbcn/public_html/app/Views/account/edit.php on line 16
 [21-Feb-2016 18:50:41 Europe/Madrid] PHP Fatal error:  Call to undefined method ModelLogin::getFormData() in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 79
 [21-Feb-2016 18:54:59 Europe/Madrid] PHP Fatal error:  Call to undefined method ModelLogin::getFormData() in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 87
+[24-Feb-2016 16:48:08 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in /home/uqfhhbcn/public_html/app/translations/ca.php on line 30
+[24-Feb-2016 17:04:34 Europe/Madrid] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/uqfhhbcn/public_html/app/Views/layouts/indexlayout.php on line 15
+[24-Feb-2016 17:30:22 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/uqfhhbcn/public_html/app/Views/layouts/indexlayout.php on line 72
+[24-Feb-2016 17:31:08 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/uqfhhbcn/public_html/app/Views/layouts/indexlayout.php on line 72
+[24-Feb-2016 17:32:29 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/uqfhhbcn/public_html/app/Views/layouts/indexlayout.php on line 72
+[24-Feb-2016 17:39:52 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/uqfhhbcn/public_html/app/Views/layouts/indexlayout.php on line 70
+[24-Feb-2016 17:51:31 Europe/Madrid] PHP Fatal error:  Class 'EditAccount' not found in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 28
+[24-Feb-2016 18:17:04 Europe/Madrid] PHP Parse error:  syntax error, unexpected '!' in /home/uqfhhbcn/public_html/framework/Model/ModelAccount.php on line 127
+[24-Feb-2016 18:20:42 Europe/Madrid] PHP Fatal error:  Class 'EditAccount' not found in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 28
+[25-Feb-2016 17:57:21 Europe/Madrid] PHP Parse error:  syntax error, unexpected ',' in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 11
+[25-Feb-2016 17:57:58 Europe/Madrid] PHP Parse error:  syntax error, unexpected '.' in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 11
+[25-Feb-2016 18:04:16 Europe/Madrid] PHP Parse error:  syntax error, unexpected ':' in /home/uqfhhbcn/public_html/framework/Model/ModelAdminPanel.php on line 12
+[26-Feb-2016 19:10:42 Europe/Madrid] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 134
+[26-Feb-2016 19:10:42 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php:134) in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 384
+[26-Feb-2016 19:17:36 Europe/Madrid] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/uqfhhbcn/public_html/framework/Model/ModelLogin.php on line 134
+[26-Feb-2016 19:34:50 Europe/Madrid] PHP Fatal error:  Class 'Config' not found in /home/uqfhhbcn/public_html/framework/Model.php on line 23

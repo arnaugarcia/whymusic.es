@@ -24,6 +24,24 @@ define("WORDING_APELLIDO1", "Primer cognom");
 define("WORDING_APELLIDO2", "Segon cognom");
 define("WORDING_IDIOMA", 'Idioma');
 define("WORDING_TELEFON", 'Telèfon');
+define("WORDING_NOMBRE_LOCAL", "Nom local:");
+define("WORDING_DIRECCION", "Direcció:");
+define("WORDING_LATITUD", 'Latitud:');
+define('WORDING_LONGITUD', 'Longitud:');
+define('WORDING_NOM_LOCAL', 'Local');
+define('WORDING_NOM_USUARIOS', 'Usuaris');
+define('WORDING_NOM_MUSICOS', "Musicos");
+define('WORDING_NOM_FAN', "Fans");
+define("WORDING_PROFILE_USERNAME", "Nom d'usuari");
+define('WORDING_PROFILE_NOMBRE_LOCAL', "Local");
+define('WORDING_PROFILE_APELLIDO1', "Primer cognom");
+define('WORDING_PROFILE_APELLIDO2', 'Segon cognom');
+define("WORDING_PROFILE_EMAIL", "Email");
+define("WORDING_PROFILE_DIRECCION", "Direcció");
+
+
+
+
 /*Vistas 
 /*Botones en la applicación*/
 define('BUTTON_MOD_DATA', "Modificar dades");
@@ -102,9 +120,8 @@ define("WORDING_REMEMBER_ME", "Mantén-me connectat (durant 2 setmanes)"); //"No
 define("WORDING_REQUEST_PASSWORD_RESET", "Sol·licitar un restabliment de contrasenya. Introdueixi el seu nom d'usuari i obtindràs un correu electrònic amb les instruccions:");
 define("WORDING_RESET_PASSWORD", "Canviar la contrasenya");
 define("WORDING_SUBMIT_NEW_PASSWORD", "Enviar contrasenya nova");
-define("WORDING_USERNAME", "Nom");
 define("WORDING_USERNAME", "Nom d'usuari");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "Has iniciat la sessió com a "); //"T'has connectat com a";
 
 //constants pròpies
-
+?>

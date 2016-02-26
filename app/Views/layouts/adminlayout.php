@@ -11,77 +11,13 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <?php
-        $login = new ModelLogin();
-        if ($_GET["ruta"]=="account/admin" || $_GET["ruta"]=="account/edit" || $_GET["ruta"]=="admin/edit"): ?>
-        <style>
-        #myMap {
-            height: 350px;
-            width: 680px;
-        }
-        </style>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script type="text/javascript">
-        var map;
-        var marker;
-        var myLatlng = new google.maps.LatLng(41.39591685804173,2.190355086180034);
-        var geocoder = new google.maps.Geocoder();
-        var infowindow = new google.maps.InfoWindow();
-        function initialize(){
-            var mapOptions = {
-            zoom: 18,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        map = new google.maps.Map(document.getElementById("myMap"), mapOptions);
-
-        marker = new google.maps.Marker({
-            map: map,
-            position: myLatlng,
-            draggable: true
-        });
-
-        geocoder.geocode({'latLng': myLatlng }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            if (results[0]) {
-                $('#latitude,#longitude').show();
-                $('#address').val(results[0].formatted_address);
-                $('#latitude').val(marker.getPosition().lat());
-                $('#longitude').val(marker.getPosition().lng());
-                infowindow.setContent(results[0].formatted_address);
-                infowindow.open(map, marker);
-            }
-        }
-        });
-
-        google.maps.event.addListener(marker, 'dragend', function() {
-
-            geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                if (results[0]) {
-                    $('#address').val(results[0].formatted_address);
-                    $('#latitude').val(marker.getPosition().lat());
-                    $('#longitude').val(marker.getPosition().lng());
-                    infowindow.setContent(results[0].formatted_address);
-                    infowindow.open(map, marker);
-                }
-            }
-        });
-    });
-
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <?php endif ?>
     </head>
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Menú</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -202,7 +138,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="text-center">
-                                                   <a href="<?php echo ROUTER::create_action_url("account/recover") ?>" tabindex="5" class="forgot-password">Contraseña olvidada?</a>
+                                                    <a href="<?php echo ROUTER::create_action_url("account/recover") ?>" tabindex="5" class="forgot-password">Contraseña olvidada?</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -215,11 +151,68 @@
             </ul>
             </div>
         </div>
-
     </nav>
-    <div class="container" style="margin-top: 5%;">
-        <?php include $content; ?>
+        <div class="row affix-row">
+    <div class="col-sm-3 col-md-2 affix-sidebar">
+        <div class="sidebar-nav">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+      <span class="sr-only">Menú</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <span class="visible-xs navbar-brand">Menú lateral</span>
     </div>
+    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+      <ul class="nav navbar-nav" id="sidenav01">
+        <li class="active">
+          <a href="<?php echo ROUTER::create_action_url('admin/admin') ?>" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
+          <h4>
+          Admin Panel
+          <br>
+          </h4>
+          </a>
+        </li>
+        <li <?php if ($_GET['ruta']=="admin/admin" || $_GET['ruta']=="admin/edit"): ?>
+            class="active"
+        <?php endif ?>>
+          <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
+          <span class="glyphicon glyphicon-cloud"></span> Usuarios <span class="caret pull-right"></span>
+          </a>
+          <div class="collapse" id="toggleDemo" style="height: 0px;">
+            <ul class="nav nav-list">
+              <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=local') ?>">Locales</a></li>
+              <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=fan') ?>">Fans</a></li>
+              <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=musicos') ?>">Musicos</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed">
+          <span class="glyphicon glyphicon-inbox"></span> Submenu 2 <span class="caret pull-right"></span>
+          </a>
+          <div class="collapse" id="toggleDemo2" style="height: 0px;">
+            <ul class="nav nav-list">
+              <li><a href="#">Submenu2.1</a></li>
+              <li><a href="#">Submenu2.2</a></li>
+              <li><a href="#">Submenu2.3</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
+        <li><a href=""><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li>
+      </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+    </div>
+    <div class="col-sm-9 col-md-10 affix-content">
+        <div class="container" style="margin-top: 5%;">
+            <?php include $content; ?>
+        </div>
     <footer>
             <div class="row" style="text-align: center;">
                 <div class="col-lg-12">

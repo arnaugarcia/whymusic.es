@@ -98,7 +98,7 @@ class ModelRegistration
             $this->errors[] = MESSAGE_EMAIL_TOO_LONG;
         } elseif (!filter_var($usuario_email, FILTER_VALIDATE_EMAIL)) {
             $this->errors[] = MESSAGE_EMAIL_INVALID;
-        } elseif ($usuario_tipo!='fan' && $usuario_tipo!='musico' && $usuario_tipo!='local') {
+        } elseif ($usuario_tipo!="fan" && $usuario_tipo!="musico" && $usuario_tipo!="local") {
                 $this->errors[] = MESSAGE_TIPO_USUARIO;
         // finally if all the above checks are ok
         } else if ($this->databaseConnection()) {
@@ -145,7 +145,9 @@ class ModelRegistration
                     // send a verification email
                     if ($this->sendVerificationEmail($usuario_id, $usuario_email, $usuario_hash)) {
                         // when mail has been send successfully
-                        $this->messages[] = MESSAGE_VERIFICATION_MAIL_SENT;
+                        echo HTML::open_div(array("class" => "form-group has-success", "style" => "text-align: center"));
+                        echo HTML::label("inputSuccess1", MESSAGE_VERIFICATION_MAIL_SENT, array("class" => "control-label"));
+                        echo HTML::close_div();
                         $this->registration_successful = true;
                     } else {
                         // delete this wm_usuarios account immediately, as we could not send a verification email

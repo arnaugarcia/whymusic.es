@@ -1,16 +1,20 @@
 <h1>Hola desde Register</h1>
 <?php
 $registration = new ModelRegistration();
-if (isset($registration)) {
-    if ($registration->errors) {
-        foreach ($registration->errors as $error) {
-            echo "Error" . $error;
-        }
-    }
-    if ($registration->messages) {
-        foreach ($registration->messages as $message) {
-            echo "Mensaje: " . $message;
-        }
+    if(isset($registration)) {
+        if($registration->errors) {
+            foreach ($registration->errors as $error) {
+                echo HTML::open_div(array("class" => "form-group has-error", "style" => "text-align: center;"));
+                echo HTML::label("usuario_nombre_usuario",$error, array("class" => "control-label"));
+                echo HTML::close_div();
+            }
+        if($registration->messages) {
+       		foreach ($registration->messages as $message) {
+            	echo HTML::open_div(array("class" => "form-group has-success", "style" => "text-align: center"));
+            	echo HTML::label("inputSuccess1", array("class" => "control-label"));
+        	    echo HTML::close_div();
+        	}
+   		}
     }
 }
 echo ROUTER::create_action_url("account/register");

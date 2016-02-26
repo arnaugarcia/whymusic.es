@@ -67,5 +67,14 @@ class AccountController extends Config{
             return ROUTER::show_view('account/login', array('meta' => $meta));
         }
     }
+    public function recover(){
+        $meta = array(
+            'title' => 'WhyMusic · Recuperación de la contraseña',
+            'description' => 'Recuperación de la contraseña',
+            'keywords' => 'php, framework, mvc',
+            'robots' => 'All',
+            );
+        return ROUTER::show_view('account/recover', array('meta' => $meta));
+    }
 }
 

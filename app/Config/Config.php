@@ -1,14 +1,15 @@
 <?php
 session_start();
-define("RUTA_INDEX", "demo/index");
-define("RUTA_LOGIN", "account/login");
-define("RUTA_REGISTER", "account/register");
-/*Conexion base de datos*/
+/*coockies y histórias*/
+define("RUTA_INDEX", 'demo/index');
+define("RUTA_LOGIN", 'account/login');
+define("RUTA_REGISTER", 'account/register');
+
 define("DB_HOST", "localhost:3306");
 define("DB_NAME", "uqfhhbcn_whymusic");
 define("DB_USER", "uqfhhbcn");
 define("DB_PASS", "soserexo");
-/*Cookies y histórias*/
+
 define("COOKIE_RUNTIME", 1209600);
 define("COOKIE_DOMAIN", ".whymusic.es");
 define("COOKIE_SECRET_KEY", "1gpasdgg4@TMPa42sdfS{+$78616331sfpMJFe-92s");
@@ -44,7 +45,7 @@ define("HASH_COST_FACTOR", "10");
 
 class Config{
     public $appName = "WhyMusic";
-    public $debug = true;
+    public $debug = false;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(
