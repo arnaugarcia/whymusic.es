@@ -228,7 +228,9 @@ class ModelRegistration
 
             if ($query_update_user->rowCount() > 0) {
                 $this->verification_successful = true;
-                $this->messages[] = MESSAGE_REGISTRATION_ACTIVATION_SUCCESSFUL;
+                echo HTML::open_div(array("class" => "form-group has-success", "style" => "text-align: center"));
+                echo HTML::label("inputSuccess1", MESSAGE_REGISTRATION_ACTIVATION_SUCCESSFUL , array("class" => "control-label"));
+                echo HTML::close_div();
             } else {
                 $this->errors[] = MESSAGE_REGISTRATION_ACTIVATION_NOT_SUCCESSFUL;
             }

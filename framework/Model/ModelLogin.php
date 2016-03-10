@@ -65,6 +65,10 @@ class ModelLogin{
         //    logged-in-status is written into his session data on the server. this is the typical behaviour of common login scripts.
 
         // if user tried to log out
+        if(isset($_POST["delete_user"])){
+            $this->deleteUser($this->getUserId());
+            $this->doLogout();
+        }
         if (isset($_GET["logout"])) {
             $this->doLogout();
 
@@ -553,9 +557,6 @@ class ModelLogin{
             $this->errors[] = MESSAGE_USERNAME_EMPTY;
 
         } else {
-            // generate timestamp (to see when exactly the user (or an attacker) requested the password reset mail)
-            // btw this is an integer ;)
-            $temporary_timestamp = time();
             // generate random hash for email password reset verification (40 char string)
             $usuario_contrasena_reset_hash = sha1(uniqid(mt_rand(), true));
             // database query, getting all the info of the selected user
@@ -565,13 +566,12 @@ class ModelLogin{
             if (isset($result_row->usuario_id)) {
 
                 // database query:
-                $query_update = $this->db_connection->prepare('UPDATE wm_usuarios SET usuario_contrasena_reset_hash = :usuario_contrasena_reset_hash,
-                                                               usuario_contrasena_reset_timestamp = :usuario_contrasena_reset_timestamp
+                $query_update = $this->db_connection->prepare('UPDATE wm_usuarios SET usuario_hash = :usuario_hash
                                                                WHERE usuario_nombre_usuario = :usuario_nombre_usuario');
-                $query_update->bindValue(':usuario_contrasena_reset_hash', $usuario_contrasena_reset_hash, PDO::PARAM_STR);
-                $query_update->bindValue(':usuario_contrasena_reset_timestamp', $temporary_timestamp, PDO::PARAM_INT);
+                $query_update->bindValue(':usuario_hash', $usuario_contrasena_reset_hash, PDO::PARAM_STR);
                 $query_update->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
                 $query_update->execute();
+
 
                 // check if exactly one row was successfully changed:
                 if ($query_update->rowCount() == 1) {
@@ -592,7 +592,7 @@ class ModelLogin{
     /**
      * Sends the password-reset-email.
      */
-    public function sendPasswordResetMail($usuario_nombre_usuario, $usuario_email, $usuario_contrasena_reset_hash)
+    public function sendPasswordResetMail($usuario_nombre_usuario, $usuario_email, $usuario_contrasena_temp)
     {
         $mail = new PHPMailer;
 
@@ -623,7 +623,7 @@ class ModelLogin{
         $mail->AddAddress($usuario_email);
         $mail->Subject = EMAIL_PASSWORDRESET_SUBJECT;
 
-        $link    = EMAIL_PASSWORDRESET_URL.'?usuario_nombre_usuario='.urlencode($usuario_nombre_usuario).'&verification_code='.urlencode($usuario_contrasena_reset_hash);
+        $link    = EMAIL_PASSWORDRESET_URL.'&usuario_nombre_usuario='.urlencode($usuario_nombre_usuario).'&verification_code='.urlencode($usuario_contrasena_temp);
         $mail->Body = EMAIL_PASSWORDRESET_CONTENT . ' ' . $link;
 
         if(!$mail->Send()) {
@@ -647,18 +647,11 @@ class ModelLogin{
         } else {
             // database query, getting all the info of the selected user
             $result_row = $this->getUserData($usuario_nombre_usuario);
-
             // if this user exists and have the same hash in database
-            if (isset($result_row->usuario_id) && $result_row->usuario_contrasena_reset_hash == $verification_code) {
+            if ($result_row->usuario_hash == $verification_code) {
 
-                $timestamp_one_hour_ago = time() - 3600; // 3600 seconds are 1 hour
+                $this->password_reset_link_is_valid = true;
 
-                if ($result_row->usuario_contrasena_reset_timestamp > $timestamp_one_hour_ago) {
-                    // set the marker to true, making it possible to show the password reset edit form view
-                    $this->password_reset_link_is_valid = true;
-                } else {
-                    $this->errors[] = MESSAGE_RESET_LINK_HAS_EXPIRED;
-                }
             } else {
                 $this->errors[] = MESSAGE_USER_DOES_NOT_EXIST;
             }
@@ -695,10 +688,9 @@ class ModelLogin{
 
             // write wm_usuarios new hash into database
             $query_update = $this->db_connection->prepare('UPDATE wm_usuarios SET usuario_contrasena = :usuario_contrasena,
-                                                           usuario_contrasena_reset_hash = NULL, usuario_contrasena_reset_timestamp = NULL
-                                                           WHERE usuario_nombre_usuario = :usuario_nombre_usuario AND usuario_contrasena_reset_hash = :usuario_contrasena_reset_hash');
+                                                           usuario_hash = NULL
+                                                           WHERE usuario_nombre_usuario = :usuario_nombre_usuario');
             $query_update->bindValue(':usuario_contrasena', $usuario_contrasena, PDO::PARAM_STR);
-            $query_update->bindValue(':usuario_contrasena_reset_hash', $usuario_contrasena_reset_hash, PDO::PARAM_STR);
             $query_update->bindValue(':usuario_nombre_usuario', $usuario_nombre_usuario, PDO::PARAM_STR);
             $query_update->execute();
 
@@ -755,6 +747,21 @@ class ModelLogin{
     public function getUserId()
     {
         return $_SESSION['usuario_id'];
+    }
+    public function deleteUser($usuario_id=null)
+    {
+        if ($usuario_id==null){
+            $usuario_id=$this->getUserId();
+        }
+        if ($this->databaseConnection()) {
+            $query_user = $this->db_connection->prepare("DELETE FROM wm_usuarios WHERE usuario_id = :usuario_id");
+            $query_user->bindValue(":usuario_id", $this->getUserId(), PDO::PARAM_STR);
+            $query_user->execute();
+            echo "CUENTA ELIMINADA CON ÉXITO";
+        } else {
+            return false;
+        }
+
     }
     /**
      * Get either a Gravatar URL or complete image tag for a specified email address.

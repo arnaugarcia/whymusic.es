@@ -69,8 +69,8 @@ class HTML {
     }
     static function selectArray($name, $options=array()){
         $opt = null;
-        foreach($options as $key => $val){
-            $opt .= "<option value='$key' name='$key'>$val</option>";
+        foreach($options as $option){
+            $opt .= "<option value=".$option['estilo_id']." name=".$option['estilo_id'].">".$option['estilo_nombre']."</option>";
         }
         return "<select name='$name'>
                     $opt

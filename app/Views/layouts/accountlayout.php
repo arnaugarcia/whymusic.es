@@ -49,6 +49,11 @@
                         <li>
                             <a href="#"><i class="fa fa-fw fa-envelope"></i> Mensajes</a>
                         </li>
+                        <?php if ($login->getTypeOfUser()=="administrador") {
+                            echo "<li>";
+                            echo HTML::a(ROUTER::create_action_url('admin/admin'),"Panel de administrador");
+                            echo "</li>";
+                        } ?>
                         <li>
                             <a href="<?php echo ROUTER::create_action_url('account/edit')?>"><i class="fa fa-fw fa-gear"></i><?php echo WORDING_EDIT_USER_DATA; ?></a>
                         </li>

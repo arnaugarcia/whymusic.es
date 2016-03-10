@@ -22,58 +22,6 @@
         </style>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script type="text/javascript">
-        var map;
-        var marker;
-        var myLatlng = new google.maps.LatLng(41.39591685804173,2.190355086180034);
-        var geocoder = new google.maps.Geocoder();
-        var infowindow = new google.maps.InfoWindow();
-        function initialize(){
-            var mapOptions = {
-            zoom: 18,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        map = new google.maps.Map(document.getElementById("myMap"), mapOptions);
-
-        marker = new google.maps.Marker({
-            map: map,
-            position: myLatlng,
-            draggable: true
-        });
-
-        geocoder.geocode({'latLng': myLatlng }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            if (results[0]) {
-                $('#latitude,#longitude').show();
-                $('#address').val(results[0].formatted_address);
-                $('#latitude').val(marker.getPosition().lat());
-                $('#longitude').val(marker.getPosition().lng());
-                infowindow.setContent(results[0].formatted_address);
-                infowindow.open(map, marker);
-            }
-        }
-        });
-
-        google.maps.event.addListener(marker, 'dragend', function() {
-
-            geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                if (results[0]) {
-                    $('#address').val(results[0].formatted_address);
-                    $('#latitude').val(marker.getPosition().lat());
-                    $('#longitude').val(marker.getPosition().lng());
-                    infowindow.setContent(results[0].formatted_address);
-                    infowindow.open(map, marker);
-                }
-            }
-        });
-    });
-
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
     <?php endif ?>
     </head>
     <body>
@@ -117,6 +65,11 @@
                         <li>
                             <a href="<?php echo ROUTER::create_action_url('account/edit')?>"><i class="fa fa-fw fa-gear"></i><?php echo WORDING_EDIT_USER_DATA; ?></a>
                         </li>
+                        <?php if ($login->getTypeOfUser()=="administrador") {
+                            echo "<li>";
+                            echo HTML::a(ROUTER::create_action_url('admin/admin'),"Panel de administrador");
+                            echo "</li>";
+                        } ?>
                         <li class="divider"></li>
                         <li>
                             <a href="<?php echo ROUTER::create_action_url('account/logout&logout')?>"><i class="fa fa-fw fa-power-off"></i><?php echo WORDING_LOGOUT; ?></a>
@@ -228,4 +181,63 @@
             </div>
         </footer>
     </body>
+    <script type="text/javascript">
+        var map;
+        var marker;
+        var latitude;
+        var longitude = document.getElementById("longitude").value;
+        var latitude = document.getElementById("latitude").value;
+        if (longitude=="" || latitude=="") {
+            var myLatlng = new google.maps.LatLng(41.39591685804173,2.190355086180034);
+        }else{
+            var myLatlng = new google.maps.LatLng(latitude,longitude);
+        }
+        var geocoder = new google.maps.Geocoder();
+        var infowindow = new google.maps.InfoWindow();
+        function initialize(){
+            var mapOptions = {
+            zoom: 18,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("myMap"), mapOptions);
+
+        marker = new google.maps.Marker({
+            map: map,
+            position: myLatlng,
+            draggable: true
+        });
+
+        geocoder.geocode({'latLng': myLatlng }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+                $('#latitude,#longitude').show();
+                $('#address').val(results[0].formatted_address);
+                $('#latitude').val(marker.getPosition().lat());
+                $('#longitude').val(marker.getPosition().lng());
+                infowindow.setContent(results[0].formatted_address);
+                infowindow.open(map, marker);
+            }
+        }
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function() {
+
+            geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[0]) {
+                    $('#address').val(results[0].formatted_address);
+                    $('#latitude').val(marker.getPosition().lat());
+                    $('#longitude').val(marker.getPosition().lng());
+                    infowindow.setContent(results[0].formatted_address);
+                    infowindow.open(map, marker);
+                }
+            }
+        });
+    });
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </html>

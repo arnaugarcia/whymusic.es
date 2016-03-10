@@ -1,1 +1,1 @@
-<?php setcookie("rememberme", "guest", time() + 1209600, "/", "whymusic.es"); ?>
+<?php setcookie("rememberme", "guest", time() +1000, "/", "whymusic.es"); ?>

@@ -1,6 +1,6 @@
 <?php
 class AccountController extends Config{
-    public $layout = "layouts/indexlayout";
+    public $layout = "layouts/loginlayout";
     public function login(){
         $meta = array(
             'title' => 'WhyMusic · Login',
@@ -75,6 +75,21 @@ class AccountController extends Config{
             'robots' => 'All',
             );
         return ROUTER::show_view('account/recover', array('meta' => $meta));
+    }
+    public function delete()
+    {
+        $meta = array(
+            'title' => 'WhyMusic · Eliminación de la cuenta',
+            'description' => 'Eliminación de la cuenta',
+            'keywords' => 'php, framework, mvc',
+            'robots' => 'All',
+            );
+        $login = new ModelLogin();
+        if ($login->isUserLoggedIn() == true) {
+            return ROUTER::show_view('account/delete', array('meta' => $meta));
+        }else{
+            return ROUTER::show_view('account/login', array('meta' => $meta));
+        }
     }
 }
 

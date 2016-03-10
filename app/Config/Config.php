@@ -26,16 +26,16 @@ define("EMAIL_SMTP_ENCRYPTION", null);
  * Configuration for: password reset email data
  * Set the absolute URL to password_reset.php, necessary for email password reset links
  */
-define("EMAIL_PASSWORDRESET_URL", URL::base_url().ROUTER::create_action_url("account/register"));
+define("EMAIL_PASSWORDRESET_URL", ROUTER::create_action_url("account/recover"));
 define("EMAIL_PASSWORDRESET_FROM", "no-reply@whymusic.es");
-define("EMAIL_PASSWORDRESET_FROM_NAME", "WhyMusic");
-define("EMAIL_PASSWORDRESET_SUBJECT", "Reseteo de contraseña para WhyMusic");
-define("EMAIL_PASSWORDRESET_CONTENT", "haz click en el enalce para resetar tu cuenta:");
+define("EMAIL_PASSWORDRESET_FROM_NAME", "WhyMusic - Resetea tu contrasena");
+define("EMAIL_PASSWORDRESET_SUBJECT", "Reseteo de contrasena para WhyMusic");
+define("EMAIL_PASSWORDRESET_CONTENT", "Haz click en el enalce para resetar tu cuenta:");
 /**
  * Configuration for: verification email data
  * Set the absolute URL to register.php, necessary for email verification links
  */
-define("EMAIL_VERIFICATION_URL", URL::base_url().ROUTER::create_action_url("account/register"));
+define("EMAIL_VERIFICATION_URL", ROUTER::create_action_url("account/register"));
 define("EMAIL_VERIFICATION_FROM", "no-reply@whymusic.es");
 define("EMAIL_VERIFICATION_FROM_NAME", "Whymusic - Activación");
 define("EMAIL_VERIFICATION_SUBJECT", "Activación de la cuenta en WhyMusic");
@@ -45,7 +45,7 @@ define("HASH_COST_FACTOR", "10");
 
 class Config{
     public $appName = "WhyMusic";
-    public $debug = false;
+    public $debug = true;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(

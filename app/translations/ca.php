@@ -38,11 +38,13 @@ define('WORDING_PROFILE_APELLIDO1', "Primer cognom");
 define('WORDING_PROFILE_APELLIDO2', 'Segon cognom');
 define("WORDING_PROFILE_EMAIL", "Email");
 define("WORDING_PROFILE_DIRECCION", "Direcció");
+define("WORDING_PROFILE_ESTILO","Estil de música");
+define("WORDING_NOMBRE_MUSICO","Nom de la banda");
 
 
 
 
-/*Vistas 
+/*Vistas
 /*Botones en la applicación*/
 define('BUTTON_MOD_DATA', "Modificar dades");
 

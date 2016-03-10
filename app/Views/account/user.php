@@ -1,34 +1,25 @@
-<h1>Panel de usuario</h1>
+<h1>Información de la cuenta</h1>
+<h3>Datos del usuario</h3>
 <?php
 $login = new ModelLogin();
-// if you need the user's information, just put them into the $_SESSION variable and output them here
-echo HTML::label("usuario_foto","Foto de perfil: ");
-//echo WORDING_PROFILE_PICTURE . '<br/><img src="' . $login->user_gravatar_image_url . '" />;
-echo $login->user_gravatar_image_tag;
-echo HTML::br(2);
+$account = new showDataAccount();
+if ($login->getTypeOfUser()=="administrador" || $login->getTypeOfUser()=="musico" || $login->getTypeOfUser()=="fan" || $login->getTypeOfUser()=="local" ) {
+	$account->getProfileData($login->getUserId(),$login->getTypeOfUser());
+}else{
+ 	echo("No tienes permisos para estar aquí... ('account/user')");
+}
+?>
+<h3>Modificar contraseña</h3>
+<form method="post" action="<?php echo ROUTER::create_action_url('account/user'); ?>" name="new_password_form">
 
-echo HTML::label("usuario_nombre_usuario","Nombre de usuario: ");
-echo $login->getUserDataCampo($login->getUserId(),"usuario_nombre_usuario");
-echo HTML::br(2);
+    <label for="user_password_new"><?php echo WORDING_NEW_PASSWORD; ?></label>
+    <input id="user_password_new" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
 
-echo HTML::label("usuario_tipo","Tipo de cuenta: ");
-echo $login->getUserDataCampo($login->getUserId(),"usuario_tipo");
-echo HTML::br(2);
-
-echo HTML::label("usuario_nombre","Nombre:");
-echo $login->getUserDataCampo($login->getUserId(),"usuario_nombre");
-echo HTML::br(2);
-
-echo HTML::label("usuario_apellido1","Apellido:");
-echo $login->getUserDataCampo($login->getUserId(),"usuario_apellido1");
-echo HTML::br(2);
-
-echo HTML::label("usuario_apellido2","Segundo apellido:");
-echo $login->getUserDataCampo($login->getUserId(),"usuario_apellido2");
-echo HTML::br(2);
-
-echo HTML::a(ROUTER::create_action_url('account/edit'),"Editar datos", array("class" => "btn btn-default"));
-
-echo HTML::a(ROUTER::create_action_url('account/logout&logout'),"Finalizar sessión", array("class" => "btn btn-default"));
-
+    <label for="user_password_repeat"><?php echo WORDING_NEW_PASSWORD_REPEAT; ?></label>
+    <input id="user_password_repeat" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+    <input type="submit" name="submit_new_password" value="<?php echo WORDING_SUBMIT_NEW_PASSWORD; ?>" />
+</form>
+<h3>Eliminar cuenta</h3>
+<?php
+echo HTML::a(ROUTER::create_action_url("account/delete"),"Eliminar cuenta",array("class"=>"btn btn-danger"));
 ?>

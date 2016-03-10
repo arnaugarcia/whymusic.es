@@ -7,7 +7,7 @@ class AdminPanel
 	public static function showUsers($usuario_tipo)
 	{
 		$db = new DB();
-
+		$login = new ModelLogin();
 		if($usuario_tipo==null){
 			$query = DB::connect()->prepare("SELECT * FROM wm_usuarios");
 		}else{
@@ -22,10 +22,9 @@ class AdminPanel
 						echo "<tr>";
 						echo "<td>" . $row['usuario_id'] . "</td>";
 						echo "<td>" . $row['usuario_nombre'] . "</td>";
-						echo "<td>" . $row['usuario_apellido1'] . "</td>";
-						echo "<td>" . $row['usuario_apellido2'] . "</td>";
 						echo "<td>" . $row['usuario_nombre_usuario'] . "</td>";
 						echo "<td>" . $row['usuario_email'] . "</td>";
+						echo "<td>" . $db->getUserDataEstilo($login->getUserDataCampo($row['usuario_id'],"estilo_id")) . "</td>";
 						echo "<td>" . HTML::a(ROUTER::create_action_url("admin/edit&usuario_id=". $row['usuario_id'] ."&usuario_tipo=". $row['usuario_tipo'] .""),"Editar") . "</td>";
 						echo "</tr>";
 					}
@@ -56,7 +55,7 @@ class AdminPanel
 					}
 					break;
 				default:
-					# code...
+					echo "Error en AdminPanel";
 					break;
 		}
 	}

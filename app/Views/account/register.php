@@ -11,7 +11,7 @@ $registration = new ModelRegistration();
         if($registration->messages) {
        		foreach ($registration->messages as $message) {
             	echo HTML::open_div(array("class" => "form-group has-success", "style" => "text-align: center"));
-            	echo HTML::label("inputSuccess1", array("class" => "control-label"));
+            	echo HTML::label("inputSuccess1", $message, array("class" => "control-label"));
         	    echo HTML::close_div();
         	}
    		}

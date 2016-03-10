@@ -17,7 +17,7 @@ require 'Model/ModelDB.php';
 require 'Model/ModelFormValidate.php';
 require 'Model/ModelAdminPanel.php';
 require "../app/Config/Config.php";
-require '../app/libraries/PHPMailer.php';
+require_once '../app/libraries/PHPMailer.php';
 
 /* Método para los errores */
 $config = new Config();

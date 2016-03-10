@@ -11,6 +11,71 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <?php
+        $login = new ModelLogin();
+        if ($_GET["ruta"]=="account/admin" || $_GET["ruta"]=="account/edit" || $_GET["ruta"]=="admin/edit"): ?>
+        <style>
+        #myMap {
+            height: 350px;
+            width: 680px;
+        }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+        var map;
+        var marker;
+        var myLatlng = new google.maps.LatLng(41.39591685804173,2.190355086180034);
+        var geocoder = new google.maps.Geocoder();
+        var infowindow = new google.maps.InfoWindow();
+        function initialize(){
+            var mapOptions = {
+            zoom: 18,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("myMap"), mapOptions);
+
+        marker = new google.maps.Marker({
+            map: map,
+            position: myLatlng,
+            draggable: true
+        });
+
+        geocoder.geocode({'latLng': myLatlng }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+                $('#latitude,#longitude').show();
+                $('#address').val(results[0].formatted_address);
+                $('#latitude').val(marker.getPosition().lat());
+                $('#longitude').val(marker.getPosition().lng());
+                infowindow.setContent(results[0].formatted_address);
+                infowindow.open(map, marker);
+            }
+        }
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function() {
+
+            geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[0]) {
+                    $('#address').val(results[0].formatted_address);
+                    $('#latitude').val(marker.getPosition().lat());
+                    $('#longitude').val(marker.getPosition().lng());
+                    infowindow.setContent(results[0].formatted_address);
+                    infowindow.open(map, marker);
+                }
+            }
+        });
+    });
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <?php endif ?>
     </head>
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -50,6 +115,11 @@
                         <li>
                             <a href="#"><i class="fa fa-fw fa-envelope"></i> Mensajes</a>
                         </li>
+                        <?php if ($login->getTypeOfUser()=="administrador") {
+                            echo "<li>";
+                            echo HTML::a(ROUTER::create_action_url('admin/admin'),"Panel de administrador");
+                            echo "</li>";
+                        } ?>
                         <li>
                             <a href="<?php echo ROUTER::create_action_url('account/edit')?>"><i class="fa fa-fw fa-gear"></i><?php echo WORDING_EDIT_USER_DATA; ?></a>
                         </li>
@@ -185,13 +255,13 @@
             <ul class="nav nav-list">
               <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=local') ?>">Locales</a></li>
               <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=fan') ?>">Fans</a></li>
-              <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=musicos') ?>">Musicos</a></li>
+              <li><a href="<?php echo ROUTER::create_action_url('admin/admin&show=musico') ?>">Musicos</a></li>
             </ul>
           </div>
         </li>
         <li>
           <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed">
-          <span class="glyphicon glyphicon-inbox"></span> Submenu 2 <span class="caret pull-right"></span>
+          <span class="glyphicon glyphicon-inbox"></span> Comentarios <span class="caret pull-right"></span>
           </a>
           <div class="collapse" id="toggleDemo2" style="height: 0px;">
             <ul class="nav nav-list">
@@ -201,9 +271,9 @@
             </ul>
           </div>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
-        <li><a href=""><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Estilos de Música</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Conciertos <span class="badge pull-right">42</span></a></li>
+        <li><a href=""><span class="glyphicon glyphicon-cog"></span> Ajustes del servidor</a></li>
       </ul>
       </div><!--/.nav-collapse -->
     </div>
