@@ -4,6 +4,8 @@ session_start();
 define("RUTA_INDEX", 'demo/index');
 define("RUTA_LOGIN", 'account/login');
 define("RUTA_REGISTER", 'account/register');
+define("RUTA_LOCALES", 'event/locales');
+
 
 define("DB_HOST", "localhost:3306");
 define("DB_NAME", "uqfhhbcn_whymusic");
@@ -45,7 +47,7 @@ define("HASH_COST_FACTOR", "10");
 
 class Config{
     public $appName = "WhyMusic";
-    public $debug = true;
+    public $debug = false;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(

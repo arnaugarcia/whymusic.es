@@ -39,16 +39,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li <?php if ($_GET["ruta"] == RUTA_INDEX){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo ROUTER::create_action_url(RUTA_INDEX); ?>"><?php echo MENU_HOME; ?></a>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_INDEX); ?>"><?php echo MENU_HOME;?></a>
                     </li>
-                    <li <?php if ($_GET["ruta"] == RUTA_LOGIN || $_GET["ruta"] == "account/edit" || $_GET["ruta"] == "account/user"){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo ROUTER::create_action_url(RUTA_LOGIN); ?>"><?php echo MENU_LOGIN ?></a>
-                    </li>
-                    <li <?php if ($_GET["ruta"] == RUTA_REGISTER){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo ROUTER::create_action_url(RUTA_REGISTER); ?>"><?php echo MENU_REGISTER ?></a>
+                    <li <?php if ($_GET["ruta"] == RUTA_LOCALES){ echo 'class="active"'; } ?>>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_LOCALES); ?>"><?php echo MENU_LOCALES;?></a>
                     </li>
                     <li>
-                        <a href="http://whymusic.es/FoSa/index.php">Projecte FoSa</a>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_INDEX); ?>"><?php echo MENU_MUSICOS;?></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-right top-nav">
@@ -168,11 +165,25 @@
             </ul>
             </div>
         </div>
-
     </nav>
-    <div class="container" style="margin-top: 5%;">
-        <?php include $content; ?>
+    <div class="col-md-8" style="padding-top: 1.5%;">
+        <form class="navbar-form" role="search">
+            <div class="input-group" style="width: 100%;">
+            Ets a: <a>Inicio</a>
+            </div>
+        </form>
     </div>
+    <div class="col-md-4" style="padding-top: 1.5%;">
+        <form class="navbar-form" role="search">
+            <div class="input-group" style="width: 100%;">
+                <input type="text" class="form-control" placeholder="Search" name="q">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+        <?php include $content; ?>
     <footer>
             <div class="row" style="text-align: center;">
                 <div class="col-lg-12">

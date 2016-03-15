@@ -37,18 +37,15 @@
                 <a class="navbar-brand" href="<?php echo ROUTER::create_action_url('demo/index')?>">WhyMusic</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+               <ul class="nav navbar-nav">
                     <li <?php if ($_GET["ruta"] == RUTA_INDEX){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo ROUTER::create_action_url(RUTA_INDEX); ?>"><?php echo MENU_HOME; ?></a>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_INDEX); ?>"><?php echo MENU_HOME;?></a>
                     </li>
-                    <li <?php if ($_GET["ruta"] == RUTA_LOGIN || $_GET["ruta"] == "account/edit" || $_GET["ruta"] == "account/user"){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo ROUTER::create_action_url(RUTA_LOGIN); ?>"><?php echo MENU_LOGIN ?></a>
-                    </li>
-                    <li <?php if ($_GET["ruta"] == RUTA_REGISTER){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo ROUTER::create_action_url(RUTA_REGISTER); ?>"><?php echo MENU_REGISTER ?></a>
+                    <li <?php if ($_GET["ruta"] == RUTA_LOCALES){ echo 'class="active"'; } ?>>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_LOCALES); ?>"><?php echo MENU_LOCALES;?></a>
                     </li>
                     <li>
-                        <a href="http://whymusic.es/FoSa/index.php">Projecte FoSa</a>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_INDEX); ?>"><?php echo MENU_MUSICOS;?></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-right top-nav">

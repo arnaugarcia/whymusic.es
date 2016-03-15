@@ -2,7 +2,7 @@
 
 class AdminController
 {
-	public $layout = "layouts/adminlayout";
+    public $layout = "layouts/adminlayout";
     public function admin()
     {
     	$meta = array

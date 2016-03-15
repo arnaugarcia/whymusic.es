@@ -16,6 +16,8 @@ require 'Model/ModelAccount.php';
 require 'Model/ModelDB.php';
 require 'Model/ModelFormValidate.php';
 require 'Model/ModelAdminPanel.php';
+require 'Model/ModelEvent.php';
+require 'Model/ModelImage.php';
 require "../app/Config/Config.php";
 require_once '../app/libraries/PHPMailer.php';
 

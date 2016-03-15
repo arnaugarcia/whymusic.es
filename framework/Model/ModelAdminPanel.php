@@ -64,5 +64,19 @@ class AdminPanel
 		$EditAccount = new EditAccount();
 		$EditAccount->usuarioEdit($_GET['usuario_id'],$_GET['usuario_tipo']);
 	}
+	public function enableDebug()
+	{
+		$config = new Config();
+		if (isset($_GET['debug'])) {
+			if ($_GET['debug']==1) {
+				$config->debug=true;
+				return "Debug: OFF";
+			}
+			if ($_GET['debug']==0) {
+				$config->debug=false;
+				return "Debug: ON";
+			}
+		}
+	}
 }
 ?>

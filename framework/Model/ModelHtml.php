@@ -100,4 +100,11 @@ class HTML {
         }
         return "<input type='checkbox' name='$name' value='$value'$checked>";
     }
+    static function textArea($row, $col, $value, $name, $attributes=array()){
+        $attr = null;
+        foreach($attributes as $key => $val){
+            $attr .= " $key='$val'";
+        }
+        return "<textarea rows='$row' cols='$col' name='$name' $attr>$value</textarea>";
+    }
 }

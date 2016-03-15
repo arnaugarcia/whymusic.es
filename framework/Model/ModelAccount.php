@@ -9,8 +9,8 @@ class showDataAccount
 	{
         $login = new ModelLogin();
         $DB = new DB();
-		switch ($usuario_tipo) {
 
+		switch ($usuario_tipo) {
 
             case "musico":
                 echo HTML::label("usuario_foto",WORDING_PROFILE_PICTURE);
@@ -148,6 +148,7 @@ class EditAccount
 	{
         $getDataDB = new DB();
         $login = new ModelLogin();
+        $image = new ModelImage();
         switch ($usuario_tipo) {
             case "musico":
             if(isset($_POST['form_edit_account'])){
@@ -177,11 +178,13 @@ class EditAccount
                 $query_mod_account = DB::connect()->prepare("UPDATE  `uqfhhbcn_whymusic`.`wm_usuarios` SET  `usuario_nombre` =  :usuario_nombre,
                 `usuario_telefono` =  :usuario_telefono,
                 `usuario_idioma` = :usuario_idioma,
+                `usuario_descripcion` = :usuario_descripcion,
                 `estilo_id` = :estilo_id WHERE  `wm_usuarios`.`usuario_id` = :usuario_id;");
                 $query_mod_account->bindValue(':usuario_id', $usuario_id, PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_nombre', $_POST['usuario_nombre'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_idioma', $_POST['usuario_idioma'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_telefono', $_POST['usuario_telefono'], PDO::PARAM_STR);
+                $query_mod_account->bindValue(':usuario_descripcion', $_POST['usuario_descripcion'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':estilo_id', $_POST['estilo_nombre'], PDO::PARAM_STR);
                 $query_mod_account->execute();
                 if ($query_mod_account) {
@@ -214,9 +217,15 @@ class EditAccount
                 echo HTML::label("usuario_telefono", WORDING_TELEFON);
                 echo HTML::input("text","usuario_telefono",$login->getUserDataCampo($usuario_id,"usuario_telefono"),array("placeholder" => "9XXXXXXXX"));
                 echo HTML::br(2);
+
+                echo HTML::label("usuario_descripcion", "Descripción grupo:");
+                echo HTML::textArea("4","50",$login->getUserDataCampo($usuario_id,"usuario_descripcion"),"usuario_descripcion");
+                echo HTML::br(2);
+
                 echo HTML::label("estilo_nombre","Estilo de música:");
                 echo HTML::selectArray("estilo_nombre",$getDataDB->getFieldSQL("wm_estilo","estilo_nombre , estilo_id",""));
                 echo HTML::br(2);
+
                 echo HTML::button_HTML5("submit", BUTTON_MOD_DATA,"form_edit_account");
                 echo HTML::close_form();
             }
