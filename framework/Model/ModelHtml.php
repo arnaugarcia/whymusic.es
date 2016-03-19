@@ -24,6 +24,20 @@ class HTML {
         }
         return "<div $att>\n";
     }
+    static function p($content, $attributes=array()){
+        $att = null;
+        foreach ($attributes as $key => $val){
+            $att .= " $key='$val'";
+        }
+        return "<p $att>$content</p>\n";
+    }
+    static function b($content, $attributes=array()){
+        $att = null;
+        foreach ($attributes as $key => $val){
+            $att .= " $key='$val'";
+        }
+        return "<b $att>$content</b>\n";
+    }
     static function close_div(){
         return "</div>\n";
     }
@@ -106,5 +120,35 @@ class HTML {
             $attr .= " $key='$val'";
         }
         return "<textarea rows='$row' cols='$col' name='$name' $attr>$value</textarea>";
+    }
+    static function title($type,$content,$attributes=array())
+    {
+        $attr = null;
+        foreach($attributes as $key => $val){
+            $attr .= " $key='$val'";
+        }
+        switch ($type) {
+            case 'h1':
+                return "<h1 $attr>$content</h1>";
+                break;
+            case 'h2':
+                return "<h2 $attr>$content</h2>";
+                break;
+            case 'h3':
+                return "<h3 $attr>$content</h3>";
+                break;
+            case 'h4':
+                return "<h4 $attr>$content</h4>";
+                break;
+            case 'h5':
+                return "<h5 $attr>$content</h5>";
+                break;
+            case 'h6':
+                return "<h6 $attr>$content</h6>";
+                break;
+            default:
+                return "<h1 $attr>$content</h1>";
+                break;
+        }
     }
 }

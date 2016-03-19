@@ -4,7 +4,8 @@ session_start();
 define("RUTA_INDEX", 'demo/index');
 define("RUTA_LOGIN", 'account/login');
 define("RUTA_REGISTER", 'account/register');
-define("RUTA_LOCALES", 'event/locales');
+define("RUTA_LOCALES", 'event/local');
+define("RUTA_MUSICOS", 'event/band');
 
 
 define("DB_HOST", "localhost:3306");
@@ -42,12 +43,21 @@ define("EMAIL_VERIFICATION_FROM", "no-reply@whymusic.es");
 define("EMAIL_VERIFICATION_FROM_NAME", "Whymusic - Activación");
 define("EMAIL_VERIFICATION_SUBJECT", "Activación de la cuenta en WhyMusic");
 define("EMAIL_VERIFICATION_CONTENT", "Haz click en este enlace en activar tu cuenta:");
+/**
+ * Configuration for: verification email data
+ * Set the absolute URL to register.php, necessary for email verification links
+ */
+define("EMAIL_EVENT_URL", ROUTER::create_action_url("account/register"));
+define("EMAIL_EVENT_FROM", "no-reply@whymusic.es");
+define("EMAIL_EVENT_FROM_NAME", "Whymusic - Concierto");
+define("EMAIL_EVENT_SUBJECT", "Propuesta de concierto de ");
+define("EMAIL_EVENT_CONTENT", "Haz click en este enlace para crear el concierto:");
 /*Hash Factor*/
 define("HASH_COST_FACTOR", "10");
 
 class Config{
     public $appName = "WhyMusic";
-    public $debug = false;
+    public $debug = true;
     public $layout = "layouts/layout";
     /*public $rules = array(
          "demo/index" => array(

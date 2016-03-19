@@ -18,6 +18,7 @@ require 'Model/ModelFormValidate.php';
 require 'Model/ModelAdminPanel.php';
 require 'Model/ModelEvent.php';
 require 'Model/ModelImage.php';
+require 'Model/ModelNotification.php';
 require "../app/Config/Config.php";
 require_once '../app/libraries/PHPMailer.php';
 
@@ -49,7 +50,8 @@ if (isset($_GET["ruta"])){
         if($config->debug){
             echo "Accion: " . $action . "<br>";
         }
-        if (!class_exists($action)) {
+        //Es gracias a Alex, si peta es culpa suya
+        if (!function_exists($action)) {
             $obj = new $class_controller;
             try {
                 call_user_func(array($obj, $action));

@@ -11,7 +11,7 @@ class showDataAccount
         $DB = new DB();
 
 		switch ($usuario_tipo) {
-
+            
             case "musico":
                 echo HTML::label("usuario_foto",WORDING_PROFILE_PICTURE);
                 //echo WORDING_PROFILE_PICTURE . '<br/><img src="' . $login->user_gravatar_image_url . '" />;
@@ -22,7 +22,7 @@ class showDataAccount
                 echo $login->getUserDataCampo($login->getUserId(),"usuario_nombre");
                 echo HTML::br(2);
 
-                echo HTML::label("usuario_nombre","Idioma  de la web:");
+                echo HTML::label("usuario_nombre","Idioma de la web:");
                 echo $DB->getIdioma($login->getUserId());
                 echo HTML::br(2);
 
@@ -88,6 +88,10 @@ class showDataAccount
 
                 echo HTML::label("usuario_nombre","Idioma  de la web:");
                 echo $DB->getIdioma($login->getUserId());
+                echo HTML::br(2);
+
+                echo HTML::label("usuario_descripcion","Descripción del Local:");
+                echo $login->getUserDataCampo($usuario_id,"usuario_descripcion");
                 echo HTML::br(2);
 
                 echo HTML::label("usuario_nombre",WORDING_NOMBRE_LOCAL);
@@ -254,12 +258,14 @@ class EditAccount
                 $query_mod_account = DB::connect()->prepare("UPDATE  `uqfhhbcn_whymusic`.`wm_usuarios` SET  `usuario_nombre` =  :usuario_nombre,
                 `usuario_telefono` =  :usuario_telefono,
                 `usuario_direccion` =  :usuario_direccion,
+                `usuario_descripcion` =  :usuario_descripcion,
                 `usuario_lat` =  :usuario_lat,
                 `usuario_lon` =  :usuario_lon,
                 `usuario_idioma` = :usuario_idioma WHERE  `wm_usuarios`.`usuario_id` = :usuario_id;");
                 $query_mod_account->bindValue(':usuario_id', $usuario_id, PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_nombre', $_POST['usuario_nombre'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_direccion', $_POST['usuario_direccion'], PDO::PARAM_STR);
+                $query_mod_account->bindValue(':usuario_descripcion', $_POST['usuario_descripcion'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_lon', $_POST['usuario_lon'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_lat', $_POST['usuario_lat'], PDO::PARAM_STR);
                 $query_mod_account->bindValue(':usuario_idioma', $_POST['usuario_idioma'], PDO::PARAM_STR);
@@ -312,6 +318,11 @@ class EditAccount
                 echo HTML::label("usuario_telefono", WORDING_TELEFON);
                 echo HTML::input("text","usuario_telefono",$login->getUserDataCampo($usuario_id,"usuario_telefono"),array("placeholder" => "9XXXXXXXX"));
                 echo HTML::br(2);
+
+                echo HTML::label("usuario_descripcion", "Descripción grupo:");
+                echo HTML::textArea("4","50",$login->getUserDataCampo($usuario_id,"usuario_descripcion"),"usuario_descripcion");
+                echo HTML::br(2);
+
                 echo HTML::label("estilo_nombre",WORDING_PROFILE_ESTILO);
                 echo HTML::selectArray("estilo_nombre",$getDataDB->getFieldSQL("wm_estilo","estilo_nombre , estilo_id",""));
                 echo HTML::br(2);
@@ -319,11 +330,79 @@ class EditAccount
                 echo HTML::close_form();
             }
                 break;
-            case "Fan":
-                echo "Form Fan";
+            /**
+            * FORM FAN
+            */
+            case "fan":
+            if(isset($_POST['form_edit_account'])){
+                if (empty($_POST['usuario_nombre'])) {
+                echo MESSAGE_FORM_NOMBRE_EMPTY;
+                echo HTML::br(2);
+                echo "<a href='javascript:history.back()'> Volver Atrás</a>";
+            } elseif ($_POST['usuario_idioma']=="") {
+                $_POST['usuario_idioma']==$login->getUserDataCampo($usuario_id, "usuario_idioma");
+            } elseif ($_POST['usuario_idioma']!="ca" && $_POST['usuario_idioma']!="en" && $_POST['usuario_idioma']!="es") {
+                echo MESSAGE_FORM_IDIOMA;
+                echo HTML::br(2);
+                echo "<a href='javascript:history.back()'> Volver Atrás</a>";
+            } elseif ($_POST['usuario_idioma']!="ca" && $_POST['usuario_idioma']!="en" && $_POST['usuario_idioma']!="es") {
+                echo MESSAGE_FORM_IDIOMA;
+                echo HTML::br(2);
+                echo "<a href='javascript:history.back()'> Volver Atrás</a>";
+            } else{
+                $query_mod_account = DB::connect()->prepare("UPDATE  `uqfhhbcn_whymusic`.`wm_usuarios` SET  
+                `usuario_nombre` =  :usuario_nombre,
+                `usuario_apellido1` =  :usuario_apellido1,
+                `usuario_apellido2` =  :usuario_apellido2,
+                `usuario_idioma` = :usuario_idioma 
+                 WHERE  `wm_usuarios`.`usuario_id` = :usuario_id;");
+                $query_mod_account->bindValue(':usuario_id', $usuario_id, PDO::PARAM_STR);
+                $query_mod_account->bindValue(':usuario_nombre', $_POST['usuario_nombre'], PDO::PARAM_STR);
+                $query_mod_account->bindValue(':usuario_apellido1', $_POST['usuario_apellido1'], PDO::PARAM_STR);
+                $query_mod_account->bindValue(':usuario_apellido2', $_POST['usuario_apellido2'], PDO::PARAM_STR);
+                $query_mod_account->bindValue(':usuario_idioma', $_POST['usuario_idioma'], PDO::PARAM_STR);
+                $query_mod_account->execute();
+                if ($query_mod_account) {
+                    echo MESSAGE_CORRECT_MOD;
+                    if ($login->getTypeOfUser()=="administrador") {
+                        ROUTER::redirect_to_action("admin/admin",2);
+                    }else{
+                        ROUTER::redirect_to_action("account/edit",2);
+                    }
+                }else{
+                    echo MESSAGE_ERROR_SQL;
+                    echo HTML::br(2);
+                    echo "<a href='javascript:history.back()'> Volver Atrás</a>";
+                }
+            }
+            }else{
+                echo HTML::open_form(ROUTER::create_action_url('account/edit'), "POST","form_edit_account");
+                /*Guarrada provisional*/
+                $_SESSION['usuario_id_edit']=$login->getUserDataCampo($usuario_id,"usuario_id");
+                $_SESSION['usuario_tipo_edit']=$login->getUserDataCampo($usuario_id,"usuario_tipo");
+                /*Fin de la gurrada*/
+                echo HTML::label("usuario_nombre", WORDING_NOMBRE);
+                echo HTML::input("text","usuario_nombre",$login->getUserDataCampo($usuario_id,"usuario_nombre"),array("placeholder" => "Su nombre"));
+                echo HTML::br(2);
+
+                echo HTML::label("usuario_apellido1", WORDING_APELLIDO1);
+                echo HTML::input("text","usuario_apellido1",$login->getUserDataCampo($usuario_id,"usuario_apellido1"),array("placeholder" => "Su nombre"));
+                echo HTML::br(2);
+
+                echo HTML::label("usuario_apellido2", WORDING_APELLIDO2);
+                echo HTML::input("text","usuario_apellido2",$login->getUserDataCampo($usuario_id,"usuario_apellido2"),array("placeholder" => "Su nombre"));
+                echo HTML::br(2);
+
+                echo HTML::label("usuario_idioma", WORDING_IDIOMA);
+                echo HTML::select("usuario_idioma",array("Idioma por defecto" => $login->getUserDataCampo($usuario_id,'usuario_idioma'), "Inglés" => "en", "Castellano" => "es", "Catalán" => "ca"));
+                echo HTML::br(2);
+
+                echo HTML::button_HTML5("submit", BUTTON_MOD_DATA,"form_edit_account");
+                echo HTML::close_form();
+            }
                 break;
             case "administrador":
-                echo "FORM ADMIN";
+                echo "DESDE LA BASE DE DATOS";
                 break;
             default:
                 echo "No tienes permisos para estar aquí...";

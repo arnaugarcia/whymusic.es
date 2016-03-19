@@ -748,6 +748,30 @@ class ModelLogin{
     {
         return $_SESSION['usuario_id'];
     }
+    public function isMusico()
+    {
+        if ($this->getTypeOfUser()=="musico") {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function isLocal()
+    {
+        if ($this->getTypeOfUser()=="local") {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function isFan()
+    {
+        if ($this->getTypeOfUser()=="fan") {
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function deleteUser($usuario_id=null)
     {
         if ($usuario_id==null){

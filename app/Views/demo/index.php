@@ -41,66 +41,27 @@
 </div>
     <div class="col-md-4 pre-scrollable" style="margin-top: 1%; height: 50%;">
         <div class="col-md-6"><h4>Calendario</h4></div>
-        <div class="col-md-6"><a href="">Ver toda la programació</a></div>
+        <div class="col-md-6"><a href="<?php echo ROUTER::create_action_url("event/index"); ?>">Ver toda la programación</a></div>
         <table class="table table-hover">
+        <?php $concierto = new Concert();
+              $login = new ModelLogin(); ?>
             <thead>
                 <tr>
-                    <th>Concierto</th>
+                    <th>Fecha</th>
                     <th>Grupo</th>
                     <th>Local</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                <tr>
-                  <td>Barcelona Beach Festival</td>
-                  <td>Martin Garrix</td>
-                  <td>Barcelona</td>
-                </tr>
-                <tr>
-                  <td>Guns And Roses</td>
-                  <td>Guns And Roses</td>
-                  <td>La Bóveda</td>
-                </tr>
-                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
-                                <tr>
-                  <td>Black Festival</td>
-                  <td>Iron Maiden</td>
-                  <td>Razzmataz</td>
-                </tr>
+                <?php 
+                  foreach ($concierto->getConciertoAll(null) as $row) {
+                    echo "<tr>";
+                      echo "<td>" .$row['concierto_fecha'] . "</td>";
+                      echo "<td>" . $login->getUserDataCampo($row['musico_id'],"usuario_nombre") . "</td>";
+                      echo "<td>" . $login->getUserDataCampo($row['local_id'],"usuario_nombre") . "</td>";
+                    echo "</tr>";
+                  }
+                ?>
               </tbody>
             </table>
         </div>
@@ -109,63 +70,21 @@
     <div class="container">
         <!-- Sección de los locales -->
         <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Locales</h2>
-            </div>
-            <?php 
+            <?php
             $local = new Local();
-            $local->getLocalAll(6);
+            $local->getLocalAll(6,true);
              ?>
-        <!-- /.row -->
-
-        <!-- Features Section -->
         <div class="row">
+        <div class="col-lg-12">
+                <h2 class="page-header">Banda</h2>
+            </div>
         <?php
-        $banda = new Banda();
-            $reverse = false;
-            foreach ($banda->getBanda(null, 4) as $row) {
-                if ($reverse == false) {
-                $reverse=true;
-                echo '<div class="col-lg-12">';
-                    echo '<h2 class="page-header">'.$row['usuario_nombre'].'</h2>';
-                    echo '</div>';
-                    echo '<div class="col-md-6">';
-                    echo '<p>'.$row['usuario_nombre'].'</p>';
-                    if ($row['usuario_descripcion']=="") {
-                        echo '<p>Descripción del grupo aún no insertada</p>';
-                    }else{
-                        echo '<p>'.$row['usuario_descripcion'].'</p>';
-                    }
-            echo '</div>';
-            echo '<div class="col-md-6">';
-                echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="">';
-            echo '</div>';
-                }else {
-                echo '<div class="col-lg-12">';
-                    echo '<h2 class="page-header">'.$row['usuario_nombre'].'</h2>';
-                    echo '</div>';
-                    echo '<div class="col-md-6">';
-                    echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="">';
-                    echo '</div>';
-                    echo '<div class="col-md-6">';
-                    echo '<p>'.$row['usuario_nombre'].'</p>';
-                    if ($row['usuario_descripcion']=="") {
-                        echo '<p>Descripción del grupo aún no insertada</p>';
-                    }else{
-                        echo '<p>'.$row['usuario_descripcion'].'</p>';
-                    }
-            echo '</div>';
-            $reverse=false;
-                }
-            }
+            $band = new Band();
+            $band->getBandAll(4);
          ?>
         </div>
-        <!-- /.row -->
         <hr>
     </div>
-    <!-- /.container -->
-
-    <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
