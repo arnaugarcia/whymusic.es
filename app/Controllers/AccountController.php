@@ -91,5 +91,20 @@ class AccountController extends Config{
             return ROUTER::show_view('account/login', array('meta' => $meta));
         }
     }
+    public function event()
+    {
+        $meta = array(
+            'title' => 'WhyMusic · Tus eventos',
+            'description' => 'Eliminación de la cuenta',
+            'keywords' => 'php, framework, mvc',
+            'robots' => 'All',
+            );
+        $login = new ModelLogin();
+        if ($login->isUserLoggedIn() == true) {
+            return ROUTER::show_view('account/event', array('meta' => $meta));
+        }else{
+            return ROUTER::show_view('account/login', array('meta' => $meta));
+        }
+    }
 }
 

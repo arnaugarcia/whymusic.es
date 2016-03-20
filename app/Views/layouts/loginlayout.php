@@ -47,6 +47,9 @@
                     <li  <?php if ($_GET["ruta"] == RUTA_MUSICOS){ echo 'class="active"'; } ?>>
                         <a href="<?php echo ROUTER::create_action_url(RUTA_MUSICOS); ?>"><?php echo MENU_MUSICOS;?></a>
                     </li>
+                    <li  <?php if ($_GET["ruta"] == RUTA_EVENTOS){ echo 'class="active"'; } ?>>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_EVENTOS); ?>"><?php echo MENU_EVENTOS;?></a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-right top-nav">
                     <?php 

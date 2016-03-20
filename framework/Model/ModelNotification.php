@@ -7,7 +7,7 @@ class Notifications
 	
 	public function checkNotification($usuario_id)
 	{
-		$query_check_notification = DB::connect()->prepare("SELECT * FROM  `wm_notificaciones` WHERE  usuario_id = :usuario_id ORDER BY notificacion_fecha ASC");
+		$query_check_notification = DB::connect()->prepare("SELECT * FROM  `wm_notificaciones` WHERE  usuario_id = :usuario_id ORDER BY notificacion_id DESC LIMIT 0 , 5");
         $query_check_notification->bindValue(':usuario_id', $usuario_id, PDO::PARAM_INT);
         $query_check_notification->execute();
         if ($query_check_notification->rowCount() > 0) {

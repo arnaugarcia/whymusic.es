@@ -305,6 +305,9 @@ class Concert
         if (isset($_GET['verification_code'])) {
             $this->newConcertPOST($_GET['verification_code']);
         }
+        if (isset($_GET['deny_code'])) {
+            $this->denyConcert($_GET['deny_code']);
+        }
     }
     public function newConcert($local_id, $banda_id, $fecha, $precio, $duracion, $aforo)
     {
@@ -363,6 +366,24 @@ class Concert
                 echo "El código de verificación no existe";
             }
     }
+    public function denyConcert($verification_code)
+    {
+            $notifications = new Notifications();
+            $login = new ModelLogin();
+            if ($this->checkConcertExists($verification_code)) {
+                $query_new_concierto = DB::connect()->prepare("UPDATE  `uqfhhbcn_whymusic`.`wm_concierto` SET  `concierto_estado` =  'denegado' WHERE  `wm_concierto`.`concierto_verification` =:concierto_verification;");
+                $query_new_concierto->bindValue(':concierto_verification', $verification_code, PDO::PARAM_STR);
+                $query_new_concierto->execute();
+            if ($query_new_concierto) {
+                    echo "El concierto se ha denegado con éxito";
+                    ROUTER::redirect_to_action("account/event",2);
+                }else{
+                    echo "Algo ha salido mal, vuelve a intentar lo más tarde";
+                }
+            }else{
+                echo "El código de verificación no existe";
+            }
+    }
     public function checkConcertExists($verification_code)
     {
         $query_check_concert = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_verification = :concierto_verification");
@@ -407,17 +428,62 @@ class Concert
             return true;
         }
     }
-    public function getConciertoAll($concierto_id)
+    public function getConciertoAll($concierto_id,$estado)
     {
         if (!$concierto_id==null) {
-            $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_id = :concierto_id AND concierto_estado = 'aceptado'");
+            $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_id = :concierto_id AND concierto_estado = :estado");
             $query_get_concierto->bindValue(':concierto_id', $concierto_id, PDO::PARAM_INT);
         }else{
-            $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_estado = 'aceptado'");
+            $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_estado = :estado");
         }
+        $query_get_concierto->bindValue(':estado',$estado, PDO::PARAM_STR);
         $query_get_concierto->execute();
         $result_row = $query_get_concierto->fetchAll();
         return $result_row;
+    }
+    public function getConciertoUser($usuario_id)
+    {
+        $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE musico_id = :usuario_id OR local_id = :usuario_id");
+        $query_get_concierto->bindValue(':usuario_id', $usuario_id, PDO::PARAM_INT);
+        $query_get_concierto->execute();
+        $result_row = $query_get_concierto->fetchAll();
+        return $result_row;
+    }
+    public function isPendiente($concierto_id)
+    {
+        $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_id = :concierto_id AND concierto_estado = 'pendiente'");
+        $query_get_concierto->bindValue(':concierto_id', $concierto_id, PDO::PARAM_INT);
+        $query_get_concierto->execute();
+        $query_get_concierto->fetchAll();
+        if ($query_get_concierto->rowCount() > 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function isDeny($concierto_id)
+    {
+        $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_id = :concierto_id AND concierto_estado = 'denegado'");
+        $query_get_concierto->bindValue(':concierto_id', $concierto_id, PDO::PARAM_INT);
+        $query_get_concierto->execute();
+        $query_get_concierto->fetchAll();
+        if ($query_get_concierto->rowCount() > 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function isAccepted($concierto_id)
+    {
+        $query_get_concierto = DB::connect()->prepare("SELECT * FROM wm_concierto WHERE concierto_id = :concierto_id AND concierto_estado = 'aceptado'");
+        $query_get_concierto->bindValue(':concierto_id', $concierto_id, PDO::PARAM_INT);
+        $query_get_concierto->execute();
+        $query_get_concierto->fetchAll();
+        if ($query_get_concierto->rowCount() > 0) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }
  ?>

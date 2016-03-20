@@ -36,6 +36,9 @@
                     <li  <?php if ($_GET["ruta"] == RUTA_MUSICOS){ echo 'class="active"'; } ?>>
                         <a href="<?php echo ROUTER::create_action_url(RUTA_MUSICOS); ?>"><?php echo MENU_MUSICOS;?></a>
                     </li>
+                    <li  <?php if ($_GET["ruta"] == RUTA_EVENTOS){ echo 'class="active"'; } ?>>
+                        <a href="<?php echo ROUTER::create_action_url(RUTA_EVENTOS); ?>"><?php echo MENU_EVENTOS;?></a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-right top-nav">
                     <?php 
@@ -206,7 +209,7 @@
             class="active"
         <?php endif ?>>
         </li>
-        <li><a href="#"></span>Tus Eventoss</a></li>
+        <li><a href="<?php echo ROUTER::create_action_url('account/event'); ?>"></span>Tus Eventos</a></li>
         </li>
         <li><a href="#"></span>Comentarios</a></li>
         <li><a href="<?php echo ROUTER::create_action_url('account/edit'); ?>"></span> Ajustes del perfil</a></li>

@@ -10,6 +10,7 @@ define("MENU_LOGIN", "Entrar");
 define("MENU_REGISTER", "Registre");
 define("MENU_LOCALES", "Locals");
 define("MENU_MUSICOS", "Músics");
+define("MENU_EVENTOS", "Events");
 /*Constantes d'error dels formularis */
 define('MESSAGE_FORM_NOMBRE_EMPTY', "El camp Nom està buit");
 define('MESSAGE_FORM_APELLIDO_EMPTY', "Un dels camps cognom està buit");

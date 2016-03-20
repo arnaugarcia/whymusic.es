@@ -54,7 +54,7 @@
               </thead>
               <tbody>
                 <?php 
-                  foreach ($concierto->getConciertoAll(null) as $row) {
+                  foreach ($concierto->getConciertoAll(null,"aceptado") as $row) {
                     echo "<tr>";
                       echo "<td>" .$row['concierto_fecha'] . "</td>";
                       echo "<td>" . $login->getUserDataCampo($row['musico_id'],"usuario_nombre") . "</td>";
