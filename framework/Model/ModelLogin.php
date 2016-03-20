@@ -305,6 +305,9 @@ class ModelLogin{
                 $this->usuario_id = $result_row->usuario_id;
                 $this->usuario_nombre_usuario = $result_row->usuario_nombre_usuario;
                 $this->usuario_email = $result_row->usuario_email;
+                $notifications = new Notifications();
+                echo $this->usuario_id;
+                $notifications->newNotification($this->usuario_id,"Login","Te has loggeado con éxito!",date('Y-m-d'));
                 $this->user_is_logged_in = true;
 
                 // reset the failed login counter for that user
@@ -786,6 +789,24 @@ class ModelLogin{
             return false;
         }
 
+    }
+    public function getProfileImage($usuario_id)
+    {
+            if ($this->databaseConnection()) {
+            // database query, getting all the info of the selected user
+            $query_user = $this->db_connection->prepare('SELECT usuario_foto FROM wm_usuarios WHERE usuario_id = :usuario_id');
+            $query_user->bindValue(':usuario_id', $usuario_id, PDO::PARAM_STR);
+            $query_user->execute();
+            // get result row (as an object)
+            $result_row = $query_user->fetchObject();
+            } else {
+                return false;
+            }
+            if ($result_row=="") {
+                return false;
+            }else{
+                return "http://www.whymusic.es/app/resources/ProfilePhoto/" . $usuario_id . "/" . $result_row->usuario_foto;
+            }
     }
     /**
      * Get either a Gravatar URL or complete image tag for a specified email address.

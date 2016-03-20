@@ -112,7 +112,7 @@ define("WORDING_NEW_PASSWORD_REPEAT", "Repeteix la nova contrasenya");
 define("WORDING_NEW_USERNAME", "Nou nom d'usuari (el nom d'usuari no pot estar buit i ha de ser azAZ09 i 2-64 caràcters)");
 define("WORDING_OLD_PASSWORD", "La vostra contrasenya ANTIGA");
 define("WORDING_PASSWORD", "Contrasenya");
-define("WORDING_PROFILE_PICTURE", "La seva foto de perfil (de gravatar):");
+define("WORDING_PROFILE_PICTURE", "La seva foto de perfil:");
 define("WORDING_REGISTER", "Registrar");
 define("WORDING_REGISTER_NEW_ACCOUNT", "Registrar un nou compte");
 define("WORDING_REGISTRATION_CAPTCHA", "Si us plau entra aquests caràcters");

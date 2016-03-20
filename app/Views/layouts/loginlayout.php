@@ -49,6 +49,29 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-right top-nav">
+                    <?php 
+                    $notifications = new Notifications();
+                    $login = new ModelLogin();
+                     ?> 
+                    <?php if ($login->isUserLoggedIn()): ?>
+                        <li class="dropdown">
+                        <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="label"></span>
+                        <i class="nav-icon fa fa-bullhorn"></i>
+                        <span class="small-screen-text">Notificaciones</span>
+                        </a>
+                        <ul class="dropdown-menu" style="width: 400px;">
+                        <?php foreach ($notifications->checkNotification($login->getUserId()) as $row): ?>
+                        <li>
+                            <a href="<?php echo ROUTER::create_action_url('account/user')?>"><i class="fa fa-fw fa-user"></i><?php echo $row['notificacion_titulo'] ?> 
+                            <div class=""><?php echo $row['notificacion_contenido']; ?></div>
+                            <div class=""><i><?php echo $row['notificacion_fecha']; ?></i></div></a>
+                        </li>
+                    <?php endforeach ?>
+                        </ul>
+                    </li>
+                    <?php endif ?>
+                <ul class="nav navbar-right top-nav">
                 <?php $login=new ModelLogin(); if($login->isUserLoggedIn() == true): ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['usuario_nombre_usuario'] ?> <b class="caret"></b></a>

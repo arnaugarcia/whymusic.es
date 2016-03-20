@@ -1,5 +1,6 @@
 <?php
 session_start();
+define('ROOTPATH', __DIR__);
 /*coockies y histórias*/
 define("RUTA_INDEX", 'demo/index');
 define("RUTA_LOGIN", 'account/login');

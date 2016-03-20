@@ -1,6 +1,6 @@
 <?php
 class AccountController extends Config{
-    public $layout = "layouts/loginlayout";
+    public $layout = "layouts/accountlayout";
     public function login(){
         $meta = array(
             'title' => 'WhyMusic · Login',

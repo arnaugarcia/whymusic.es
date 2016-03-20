@@ -84,7 +84,11 @@ class Local
                     echo HTML::close_div();
                     echo HTML::open_div(array("class" => "col-md-6"));
                 	echo '<a href="'.ROUTER::create_action_url("event/local&local_id=".$row['usuario_id']."").'">';
-                    echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="">';
+                    if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
                     echo '</a>';
                     echo HTML::close_div();
                 }else {
@@ -93,7 +97,11 @@ class Local
                     echo HTML::close_div();
                     echo HTML::open_div(array("class" => "col-md-6"));
                     echo '<a href="'.ROUTER::create_action_url("event/local&local_id=".$row['usuario_id']."").'">';
-                    echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="">';
+                    if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
                     echo '</a>';
                     echo HTML::close_div();
                     echo HTML::open_div(array("class" => "col-md-6"));
@@ -120,7 +128,11 @@ class Local
                 echo HTML::close_div();
                 echo HTML::open_div(array("class" => "col-md-6"));
                 echo '<a href="'.ROUTER::create_action_url("event/local&local_id=".$row['usuario_id']."").'">';
-                echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="">';
+               if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
                 echo '</a>';
                 echo HTML::close_div();
                 echo HTML::open_div(array("class" => "col-md-6"));
@@ -156,7 +168,11 @@ class Local
                 echo HTML::close_div();
                 echo HTML::open_div(array("class" => "col-md-6"));
                 echo '<a href="'.ROUTER::create_action_url("event/local&local_id=".$row['usuario_id']."").'">';
-                echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="">';
+                if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
                 echo '</a>';
                 echo HTML::close_div();
                 echo HTML::open_div(array("class" => "col-md-6"));
@@ -224,7 +240,11 @@ class Band
 			foreach ($query as $row) {
 	        echo '<div class="col-md-4 col-sm-6">';
 	        echo '<a href="'.ROUTER::create_action_url("event/band&band_id=".$row['usuario_id']."").'">';
-	        echo '<img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">';
+	        if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
 	        echo '</a>';
 	        echo '<h4>'.$row['usuario_nombre'].'</h4>';
 	   		//echo '<div class="col-md-8"><input id="input-21e" value="4" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" ></div>';
@@ -242,10 +262,18 @@ class Band
 			foreach ($query as $row) {
 			echo HTML::title("h1",$row['usuario_nombre']);
 	        echo '<div class="col-md-4">';
-	        echo '<img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">';
+	        if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
 	        echo '</div>';
             echo '<div class="col-md-8">';
-            echo '<img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">';
+            if ($row['usuario_foto']=="") {
+                        echo '<img class="img-responsive" src="http://placehold.it/600x250" alt="'.$row['usuario_nombre'].'">';
+                    }else{
+                        echo '<img class="img-responsive" src="'.$login->getProfileImage($row['usuario_id']).'" alt="'.$row['usuario_nombre'].'" height="250" width="650">';
+                    }
             echo '</div>';
             if ($login->isUserLoggedIn()) {
                     if ($login->isLocal() && $_GET['ruta']=="event/band") {
@@ -281,6 +309,7 @@ class Concert
     public function newConcert($local_id, $banda_id, $fecha, $precio, $duracion, $aforo)
     {
         $login = new ModelLogin();
+        $notifications = new Notifications();
         if($login->isUserLoggedIn() && ($login->isMusico() || $login->isLocal())){
             $query_new_concierto = DB::connect()->prepare("INSERT INTO  wm_concierto (concierto_id ,concierto_fecha , concierto_precio ,concierto_asistentes , concierto_duracion , concierto_verification , concierto_estado , concierto_creado, local_id , musico_id) VALUES (NULL , :fecha, :precio, :aforo, :duracion, :verification, :estado, :concierto_creado, :local_id, :banda_id)");
             $query_new_concierto->bindValue(':fecha', $fecha, PDO::PARAM_STR);
@@ -302,9 +331,13 @@ class Concert
             if ($query_new_concierto) {
                     if ($login->isLocal()) {
                             $this->sendMail($login->getUserDataCampo($banda_id,"usuario_email"),$verification);
+                            $notifications->newNotification($login->getUserId(),"Concierto","Ha creado un nuevo concierto. Le avisaremos cuando haya novedades!", date('Y-m-d'));
+                            $notifications->newNotification($banda_id,"Concierto","Hay una nueva proposición de concierto del local " . $login->getUserDataCampo($login->getUserId(),"usuario_nombre") . ". Haga click aquí para saber más", date('Y-m-d'));
                     }
                     if($login->isMusico()){
                             $this->sendMail($login->getUserDataCampo($local_id,"usuario_email"),$verification);
+                            $notifications->newNotification($login->getUserId(),"Concierto","Ha creado un nuevo concierto. Le avisaremos cuando haya novedades!", date('Y-m-d'));
+                            $notifications->newNotification($local_id,"Concierto","Hay una nueva proposición de concierto del los musico/s " . $login->getUserDataCampo($login->getUserId(),"usuario_nombre") . ". Haga click aquí para saber más", date('Y-m-d'));
                     }
                 }else{
                     echo MESSAGE_ERROR_SQL;
@@ -313,12 +346,15 @@ class Concert
     }
     public function newConcertPOST($verification_code)
     {
+            $notifications = new Notifications();
+            $login = new ModelLogin();
             if ($this->checkConcertExists($verification_code)) {
                 $query_new_concierto = DB::connect()->prepare("UPDATE  `uqfhhbcn_whymusic`.`wm_concierto` SET  `concierto_estado` =  'aceptado' WHERE  `wm_concierto`.`concierto_verification` =:concierto_verification;");
                 $query_new_concierto->bindValue(':concierto_verification', $verification_code, PDO::PARAM_STR);
                 $query_new_concierto->execute();
             if ($query_new_concierto) {
                     echo "El concierto se ha creado con exito";
+                    $notifications->newNotification($login->getUserId(),"Concierto","El concierto se ha creado con exito!", date('Y-m-d'));
                     ROUTER::redirect_to_action("demo/index",2);
                 }else{
                     echo "Algo ha salido mal, vuelve a intentar lo más tarde";
@@ -359,8 +395,8 @@ class Concert
         $mail->FromName = EMAIL_EVENT_FROM_NAME;
         $mail->AddAddress($usuario_email);
         $mail->Subject = EMAIL_EVENT_SUBJECT . "Usuario ";
-
         $link    = ROUTER::create_action_url("event/concert").'&verification_code='.urlencode($verification);
+        echo $link;
         $mail->Body = EMAIL_EVENT_CONTENT . ' ' . $link;
 
         if(!$mail->Send()) {

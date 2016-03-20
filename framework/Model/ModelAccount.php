@@ -14,8 +14,11 @@ class showDataAccount
             
             case "musico":
                 echo HTML::label("usuario_foto",WORDING_PROFILE_PICTURE);
-                //echo WORDING_PROFILE_PICTURE . '<br/><img src="' . $login->user_gravatar_image_url . '" />;
-                echo $login->user_gravatar_image_tag;
+                if ($login->getProfileImage($login->getUserId())==false) {
+                    echo "Aún no ha subido ninguna foto de perfil";
+                }else{
+                    echo '<br/><img src="' . $login->getProfileImage($login->getUserId()) . '" height="200"  width="200"/>';
+                }
                 echo HTML::br(2);
 
                 echo HTML::label("usuario_nombre","Nombre banda: ");
@@ -38,8 +41,11 @@ class showDataAccount
 
             case "fan":
                 echo HTML::label("usuario_foto",WORDING_PROFILE_PICTURE);
-                //echo WORDING_PROFILE_PICTURE . '<br/><img src="' . $login->user_gravatar_image_url . '" />;
-                echo $login->user_gravatar_image_tag;
+                if ($login->getProfileImage($login->getUserId())==false) {
+                    echo "Aún no ha subido ninguna foto de perfil";
+                }else{
+                    echo '<br/><img src="' . $login->getProfileImage($login->getUserId()) . '" height="200"  width="200"/>';
+                }
                 echo HTML::br(2);
 
                 echo HTML::label("usuario_nombre_usuario","Nombre de usuario: ");
@@ -74,8 +80,11 @@ class showDataAccount
 
                 case "local":
                 echo HTML::label("usuario_foto",WORDING_PROFILE_PICTURE);
-                //echo WORDING_PROFILE_PICTURE . '<br/><img src="' . $login->user_gravatar_image_url . '" />;
-                echo $login->user_gravatar_image_tag;
+                if ($login->getProfileImage($login->getUserId())==false) {
+                    echo "Aún no ha subido ninguna foto de perfil";
+                }else{
+                    echo '<br/><img src="' . $login->getProfileImage($login->getUserId()) . '" height="200"  width="200"/>';
+                }
                 echo HTML::br(2);
 
                 echo HTML::label("usuario_nombre_usuario","Nombre de usuario: ");
@@ -106,8 +115,11 @@ class showDataAccount
 
                 case "administrador":
                 echo HTML::label("usuario_foto",WORDING_PROFILE_PICTURE);
-                //echo WORDING_PROFILE_PICTURE . '<br/><img src="' . $login->user_gravatar_image_url . '" />;
-                echo $login->user_gravatar_image_tag;
+                if ($login->getProfileImage($login->getUserId())==false) {
+                    echo "Aún no ha subido ninguna foto de perfil";
+                }else{
+                    echo '<br/><img src="' . $login->getProfileImage($login->getUserId()) . '" height="200"  width="200"/>';
+                }
                 echo HTML::br(2);
 
                 echo HTML::label("usuario_nombre_usuario","Nombre de usuario: ");
@@ -205,11 +217,26 @@ class EditAccount
                 }
             }
             }else{
+                echo HTML::title("h3","Editar foto de perfil");
+                echo HTML::open_form(ROUTER::create_action_url("account/edit"),"POST","fileToUpload",array("enctype" => "multipart/form-data"));
+                echo HTML::label("fileToUpload","Sube tu foto");
+                echo HTML::input("file","fileToUpload",null,array("id" => "fileToUpload"));
+                echo HTML::br(1);
+                echo HTML::input("submit","usuario_foto","Subir foto");
+                echo HTML::close_form();
                 echo HTML::open_form(ROUTER::create_action_url('account/edit'), "POST","form_edit_account");
                 /*Guarrada provisional*/
                 $_SESSION['usuario_id_edit']=$login->getUserDataCampo($usuario_id,"usuario_id");
                 $_SESSION['usuario_tipo_edit']=$login->getUserDataCampo($usuario_id,"usuario_tipo");
                 /*Fin de la gurrada*/
+                echo HTML::title("h3","Editar foto de perfil");
+                echo HTML::open_form(ROUTER::create_action_url("account/edit"),"POST","usuario_foto",array("enctype" => "multipart/form-data"));
+
+                echo HTML::label("usuario_foto","Sube tu foto");
+                echo HTML::input("file","fileToUpload",null,array("id" => "fileToUpload"));
+                echo HTML::input("submit","usuario_foto","Subir foto");
+                echo HTML::close_form();
+
                 echo HTML::label("usuario_nombre", WORDING_NOMBRE_MUSICO);
                 echo HTML::input("text","usuario_nombre",$login->getUserDataCampo($usuario_id,"usuario_nombre"),array("placeholder" => "Su nombre"));
                 echo HTML::br(2);
@@ -285,6 +312,13 @@ class EditAccount
                 }
             }
             }else{
+                echo HTML::title("h3","Editar foto de perfil");
+                echo HTML::open_form(ROUTER::create_action_url("account/edit"),"POST","fileToUpload",array("enctype" => "multipart/form-data"));
+                echo HTML::label("fileToUpload","Sube tu foto");
+                echo HTML::input("file","fileToUpload",null,array("id" => "fileToUpload"));
+                echo HTML::br(1);
+                echo HTML::input("submit","usuario_foto","Subir foto");
+                echo HTML::close_form();
                 echo HTML::open_form(ROUTER::create_action_url('account/edit'), "POST","form_edit_account");
                 /*Guarrada provisional*/
                 $_SESSION['usuario_id_edit']=$login->getUserDataCampo($usuario_id,"usuario_id");
@@ -376,7 +410,15 @@ class EditAccount
                 }
             }
             }else{
+                echo HTML::title("h3","Editar foto de perfil");
+                echo HTML::open_form(ROUTER::create_action_url("account/edit"),"POST","fileToUpload",array("enctype" => "multipart/form-data"));
+                echo HTML::label("fileToUpload","Sube tu foto");
+                echo HTML::input("file","fileToUpload",null,array("id" => "fileToUpload"));
+                echo HTML::br(1);
+                echo HTML::input("submit","usuario_foto","Subir foto");
+                echo HTML::close_form();
                 echo HTML::open_form(ROUTER::create_action_url('account/edit'), "POST","form_edit_account");
+                echo HTML::title("h3","Edición de los datos de usuario");
                 /*Guarrada provisional*/
                 $_SESSION['usuario_id_edit']=$login->getUserDataCampo($usuario_id,"usuario_id");
                 $_SESSION['usuario_tipo_edit']=$login->getUserDataCampo($usuario_id,"usuario_tipo");

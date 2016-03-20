@@ -3,6 +3,7 @@
 <?php
 $login = new ModelLogin();
 $account = new showDataAccount();
+$image = new ModelImage();
 if ($login->getTypeOfUser()=="administrador" || $login->getTypeOfUser()=="musico" || $login->getTypeOfUser()=="fan" || $login->getTypeOfUser()=="local" ) {
 	$account->getProfileData($login->getUserId(),$login->getTypeOfUser());
 }else{
